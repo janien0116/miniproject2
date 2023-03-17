@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('booked_tours', function (Blueprint $table) {
+            $table->id();
+            $table->string('Destination');
+            $table->string('FromDate');
+            $table->string('ToDate');
+            $table->integer('BookedSeats');
+            $table->string('PickupPoint');
+            $table->string('PickupTime');
+            $table->json('Inclusions');
+            $table->string('Price');
+            $table->string('BookedBy');
+            $table->string('ReferenceNo', 10)->unique();
+            $table->timestamps();
+            $table->string('name');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('booked_tours');
+    }
+};
