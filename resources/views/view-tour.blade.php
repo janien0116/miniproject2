@@ -17,11 +17,6 @@
             <ul>
                 <input type="checkbox" id="menu-toggler" />
                 <label id="toggler-label" for="menu-toggler"><i class="fa-solid fa-bars"></i></label>
-              <div class="div-logo">
-                <a href="{{ route('home') }}">
-                  <img src="images/logo1.png" id="logo" width="200px">
-                </a>
-              </div>
               <li id="user-li">
                 <label class="stored-user" name="name">{{ session('name') }}</label>
               </li>

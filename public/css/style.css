@@ -716,6 +716,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 /* Touches for UX */
-#destination, #from-date, #to-date, #amount{
+#destination, #from-date, #to-date, #amount, #edit-seat-count{
     pointer-events: none;
 }

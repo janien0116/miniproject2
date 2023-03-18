@@ -32,6 +32,9 @@
                   <li>
                     <a href="{{ route('tour_history') }}" data-target="history">Tour History</a>
                   </li>
+                  <li>
+                    <a href="{{ route('tour_history') }}" data-target="history">Log Out</a>
+                  </li>
               </div>
             </ul>
         </nav>

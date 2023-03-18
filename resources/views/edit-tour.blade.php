@@ -17,11 +17,6 @@
             <ul>
                 <input type="checkbox" id="menu-toggler" />
                 <label id="toggler-label" for="menu-toggler"><i class="fa-solid fa-bars"></i></label>
-                <div class="div-logo">
-                    <a href="{{ route('home') }}">
-                    <img src="images/logo1.png" id="logo" width="200px">
-                    </a>
-                </div>
                 <li id="user-li">
                     <label class="stored-user" name="name">{{ session('name') }}</label>
                 </li>
@@ -31,6 +26,9 @@
                     </li>
                     <li>
                         <a href="{{ route('tour_history') }}" data-target="history">Tour History</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('tour_history') }}" data-target="history">Log out</a>
                     </li>
                 </div>
             </ul>
@@ -84,7 +82,7 @@
                 </div>
                 <div class="form-group" id="avail-seats">
                     <label>No. of Seats:</label>
-                    <input type="number" id="seat-count" name="BookedSeats" min="1" max="12" value="{{ $booked_tour->BookedSeats }}">
+                    <input type="number" id="edit-seat-count" name="BookedSeats" min="1" max="12" value="{{ $booked_tour->BookedSeats }}" required>
                 </div>
                 <div class="form-group">
                     <label>Choose Pick-Up Location</label>
@@ -147,41 +145,66 @@
         const RADIO_3D = document.querySelector("#three-days");
         const RADIO_2D = document.querySelector("#two-days");
         const TOUR_AMOUNT = document.querySelector("#amount");
-        const FROM_DATE = document.querySelector('#from-date'); // convert to comparable date difference
-        const TO_DATE = document.querySelector('#to-date'); // convert to comparable date difference
-        const SEAT_COUNT = document.querySelector('#seat-count');
-
-        const fromDate = new Date(FROM_DATE.value);
-        const toDate = new Date(TO_DATE.value);
-        const diffTime = Math.abs(toDate - fromDate);
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        const FROM_DATE = document.querySelector('#from-date');
+        const TO_DATE = document.querySelector('#to-date');
+        const SEAT_COUNT = document.querySelector('#edit-seat-count');
+        var amount ='{{ $booked_tour->Price }}';
 
         RADIO_3D.addEventListener('change', function(){
+            SEAT_COUNT.style.pointerEvents = 'all';
+            SEAT_COUNT.value = 1;
+            TOUR_AMOUNT.value = 0;
+            const daysDiff = getDaysDiff();
+            if (daysDiff == 2) {
+                TOUR_AMOUNT.value = (parseFloat(amount + 1000)).toFixed(2);
+            } else {
+                TOUR_AMOUNT.value = (parseFloat(amount)).toFixed(2);
+            }
+            let fromDate = new Date(FROM_DATE.value);
+            let toDate = new Date(TO_DATE.value);
             TO_DATE.value = new Date(toDate.setDate(fromDate.getDate() + 3)).toISOString().slice(0, 10);
-            // if (diffDays == 2) {
-            //     TOUR_AMOUNT.value = (parseFloat(TOUR_AMOUNT.value) - 1000).toFixed(2);
-            // } else {
-            //     TOUR_AMOUNT.value = (parseFloat(TOUR_AMOUNT.value)).toFixed(2);
-            // }
         });
+
         RADIO_2D.addEventListener('change', function(){
+            SEAT_COUNT.style.pointerEvents = 'all';
+            SEAT_COUNT.value = 1;
+            TOUR_AMOUNT.value = 0;
+            const daysDiff = getDaysDiff();
+            if (daysDiff == 3) {
+                TOUR_AMOUNT.value = (parseFloat(amount - 1000)).toFixed(2);
+            } else {
+                TOUR_AMOUNT.value = (parseFloat(amount)).toFixed(2);
+            }
+            let fromDate = new Date(FROM_DATE.value);
+            let toDate = new Date(TO_DATE.value);
             TO_DATE.value = new Date(toDate.setDate(fromDate.getDate() + 2)).toISOString().slice(0, 10);
-            // if (diffDays == 3) {
-            //     TOUR_AMOUNT.value = (parseFloat(TOUR_AMOUNT.value) + 1000).toFixed(2);
-            // } else {
-            //     TOUR_AMOUNT.value = (parseFloat(TOUR_AMOUNT.value)).toFixed(2);
-            // }
         });
-        SEAT_COUNT.addEventListener('change', function(){
-            if (SEAT_COUNT.value) {
-                TOUR_AMOUNT.value = (parseFloat(TOUR_AMOUNT.value) * parseFloat(SEAT_COUNT.value)).toFixed(2);
+
+        function getDaysDiff() {
+            const fromDate = new Date(FROM_DATE.value);
+            const toDate = new Date(TO_DATE.value);
+            const diffTime = Math.abs(toDate - fromDate);
+            return Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+        }
+
+        function priceChange() {
+            if (SEAT_COUNT.value == null || SEAT_COUNT.value <= 0) {
+                const daysDiff = getDaysDiff();
+                if (daysDiff < 3) {
+                TOUR_AMOUNT.value = (parseFloat(amount) - 1000).toFixed(2);
+                } else if (daysDiff > 2) {
+                TOUR_AMOUNT.value = (parseFloat(amount) + 1000).toFixed(2);
+                } else {
+                    TOUR_AMOUNT.value = (parseFloat(amount)).toFixed(2);
+                }
+            } else {
+                TOUR_AMOUNT.value = (parseFloat(TOUR_AMOUNT.value * SEAT_COUNT.value)).toFixed(2);
             }
-        });
-        SEAT_COUNT.addEventListener('input', function(){
-            if (SEAT_COUNT.value) {
-                TOUR_AMOUNT.value = (parseFloat(TOUR_AMOUNT.value) * parseFloat(SEAT_COUNT.value)).toFixed(2);
-            }
-        });
+        }
+
+        SEAT_COUNT.addEventListener('change', priceChange);
+        SEAT_COUNT.addEventListener('input', priceChange);
+
     </script>
     <script src="{{ asset('js/flexible.js') }}"></script>
 </body>
