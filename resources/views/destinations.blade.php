@@ -34,7 +34,7 @@
                         <a href="{{ route('tour_history') }}" data-target="history">Tour History</a>
                       </li>
                       <li>
-                        <a href="{{ route('') }}">Log out</a>
+                        <a href="">Log out</a>
                     </li>
                   </div>
                 </ul>
