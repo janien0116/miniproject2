@@ -28,14 +28,14 @@
                   </li>
                   <div id="li-div">
                       <li>
-                        <a href="{{ route('sign_in') }}" data-target="signin">Sign In</a>
-                      </li>
-                      <li>
                         <a href="#" data-target="destinations" class="active">Destinations</a>
                       </li>
                       <li>
                         <a href="{{ route('tour_history') }}" data-target="history">Tour History</a>
                       </li>
+                      <li>
+                        <a href="{{ route('') }}">Log out</a>
+                    </li>
                   </div>
                 </ul>
             </nav>
