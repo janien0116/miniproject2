@@ -46,7 +46,9 @@ class BookedTourController extends Controller
             "BookedSeats" => ['required'],
             "PickupPoint" => ['required'],
             "PickupTime" => ['required'],
-            "BookedBy" => ['required']
+            "BookedBy" => ['required'],
+            "Price" => ['required'],
+            "ToDate" => ['required']
         ]);
         $booked_tour = BookedTour::where('id', $id);
         if ($booked_tour->update($validated)) {
@@ -65,6 +67,6 @@ class BookedTourController extends Controller
     
     function destroy($id){
         BookedTour::destroy($id);
-        return redirect()->route('home');
+        return redirect()->route('tour_history');
     }
 }

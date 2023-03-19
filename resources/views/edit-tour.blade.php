@@ -56,7 +56,7 @@
                 <div class="form-group">
                     <label>Destination:</label>
                     <div class="form-subgroup">
-                        <input type="text" id="destination" name="Destination" value="{{ $booked_tour->Destination }}">
+                        <input type="text" id="destination" name="Destination" value="{{ $booked_tour->Destination }}" readonly>
                     </div>
                 </div>
                 <div class="form-group">
@@ -74,11 +74,14 @@
                 </div>
                 <div class="form-group">
                     <label>From:</label>
-                    <input type ="date" id="from-date" name="FromDate" value="{{ $booked_tour->FromDate }}">
+                    <input type ="date" id="from-date" name="FromDate" value="{{ $booked_tour->FromDate }}" readonly>
                 </div>
                 <div class="form-group">
                     <label>To:</label>
-                    <input type ="date" id="to-date" name="ToDate" value="{{ $booked_tour->ToDate }}">
+                    <input type ="date" id="to-date" name="ToDate" value="" readonly>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="todate-holder" name="ToDate" value="{{ $booked_tour->ToDate }}">
                 </div>
                 <div class="form-group" id="avail-seats">
                     <label>No. of Seats:</label>
@@ -126,7 +129,8 @@
                 <div class="form-group">
                     <label>Tour Price:</label>
                     <div class="form-subgroup" id="input-num">
-                        <input type="number" name="Price" id="amount"  value="{{ $booked_tour->Price }}">
+                        <input type="number" name="Price" id="amount"  value="" readonly required>
+                        <input type="hidden" name="Price" id="db-price" value="{{ $booked_tour->Price }}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -148,62 +152,86 @@
         const FROM_DATE = document.querySelector('#from-date');
         const TO_DATE = document.querySelector('#to-date');
         const SEAT_COUNT = document.querySelector('#edit-seat-count');
-        var amount ='{{ $booked_tour->Price }}';
+        const BTN_SAVE = document.querySelector("#btn-save-edit");
+        const DESTINATION = document.querySelector('#destination');
 
-        RADIO_3D.addEventListener('change', function(){
-            SEAT_COUNT.style.pointerEvents = 'all';
-            SEAT_COUNT.value = 1;
-            TOUR_AMOUNT.value = 0;
-            const daysDiff = getDaysDiff();
-            if (daysDiff == 2) {
-                TOUR_AMOUNT.value = (parseFloat(amount + 1000)).toFixed(2);
-            } else {
-                TOUR_AMOUNT.value = (parseFloat(amount)).toFixed(2);
-            }
-            let fromDate = new Date(FROM_DATE.value);
-            let toDate = new Date(TO_DATE.value);
-            TO_DATE.value = new Date(toDate.setDate(fromDate.getDate() + 3)).toISOString().slice(0, 10);
-        });
+        TOUR_AMOUNT.value = document.querySelector('#db-price').value;
+        TO_DATE.value = document.querySelector('#todate-holder').value;
 
-        RADIO_2D.addEventListener('change', function(){
-            SEAT_COUNT.style.pointerEvents = 'all';
-            SEAT_COUNT.value = 1;
-            TOUR_AMOUNT.value = 0;
-            const daysDiff = getDaysDiff();
-            if (daysDiff == 3) {
-                TOUR_AMOUNT.value = (parseFloat(amount - 1000)).toFixed(2);
-            } else {
-                TOUR_AMOUNT.value = (parseFloat(amount)).toFixed(2);
+        function priceRecall() {
+            let place = DESTINATION.value;
+            let baseAmount;
+            let tourAmount = parseFloat(TOUR_AMOUNT.value);
+            let seatCount = parseFloat(SEAT_COUNT.value);
+
+            if (RADIO_2D.checked) {
+                if (place == 'Ilocos'){
+                    baseAmount = 2499.00;
+                } else if (place == 'La Union') {
+                    baseAmount = 2699.00;
+                } else if (place == 'Sagada') {
+                    baseAmount = 2799.00;
+                } else if (place == 'Puerto Galera') {
+                    baseAmount = 3499.00;
+                }
+            } else if (RADIO_3D.checked) {
+                if (place == 'Ilocos'){
+                    baseAmount = 3299.00;
+                } else if (place == 'La Union') {
+                    baseAmount = 3699.00;
+                } else if (place == 'Sagada') {
+                    baseAmount = 3799.00;
+                } else if (place == 'Puerto Galera') {
+                    baseAmount = 4499.00;
+                }
             }
-            let fromDate = new Date(FROM_DATE.value);
-            let toDate = new Date(TO_DATE.value);
-            TO_DATE.value = new Date(toDate.setDate(fromDate.getDate() + 2)).toISOString().slice(0, 10);
-        });
+            tourAmount = baseAmount * seatCount;
+            return TOUR_AMOUNT.value = tourAmount;
+        }
+
+        window.onload = function() {
+            TOUR_AMOUNT.value = document.querySelector('#db-price').value;
+            checkRadio();
+        };
+
+        let fromDate = new Date(FROM_DATE.value);
+        let toDate = new Date(TO_DATE.value);
 
         function getDaysDiff() {
-            const fromDate = new Date(FROM_DATE.value);
-            const toDate = new Date(TO_DATE.value);
             const diffTime = Math.abs(toDate - fromDate);
             return Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
         }
-
-        function priceChange() {
-            if (SEAT_COUNT.value == null || SEAT_COUNT.value <= 0) {
-                const daysDiff = getDaysDiff();
-                if (daysDiff < 3) {
-                TOUR_AMOUNT.value = (parseFloat(amount) - 1000).toFixed(2);
-                } else if (daysDiff > 2) {
-                TOUR_AMOUNT.value = (parseFloat(amount) + 1000).toFixed(2);
-                } else {
-                    TOUR_AMOUNT.value = (parseFloat(amount)).toFixed(2);
-                }
-            } else {
-                TOUR_AMOUNT.value = (parseFloat(TOUR_AMOUNT.value * SEAT_COUNT.value)).toFixed(2);
+        function checkRadio () {
+            const dayDiff = getDaysDiff();
+            if (dayDiff == 3){
+                RADIO_3D.checked = true;
+            } else if (dayDiff == 2){
+                RADIO_2D.checked = true;
             }
         }
 
-        SEAT_COUNT.addEventListener('change', priceChange);
-        SEAT_COUNT.addEventListener('input', priceChange);
+        RADIO_3D.addEventListener('change', function(){
+            updateDBPrice();
+            TO_DATE.value = new Date(toDate.setDate(fromDate.getDate() + 3)).toISOString().slice(0, 10);
+            priceRecall();
+        });
+        RADIO_2D.addEventListener('change', function(){
+            updateDBPrice();
+            TO_DATE.value = new Date(toDate.setDate(fromDate.getDate() + 2)).toISOString().slice(0, 10);
+            priceRecall();
+        });
+
+        function updateDBPrice() {
+            const dbPriceInput = document.querySelector('#db-price');
+            const dbToDate = document.querySelector('#todate-holder');
+            dbPriceInput.value = TOUR_AMOUNT.value;
+            dbToDate.value = TO_DATE.value;
+        }
+
+        TOUR_AMOUNT.addEventListener('change', updateDBPrice);
+        BTN_SAVE.addEventListener('click', updateDBPrice);
+        SEAT_COUNT.addEventListener('change', priceRecall);
+        SEAT_COUNT.addEventListener('input', priceRecall);
 
     </script>
     <script src="{{ asset('js/flexible.js') }}"></script>

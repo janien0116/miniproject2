@@ -37,7 +37,7 @@ Route::get('/booktour', function () {
     return view('book-tour');
 })->name('book_tour');
 
-Route::get('/tours', [BookedTourController::class, 'index'])->name('tour_history');
+Route::get('/tours', [BookedTourController::class, 'index'])->middleware(['auth'])->name('tour_history');
 
 Route::post('/joiner/signup', [JoinerController::class, 'store'])->name('sign_up');
 Route::post('/login', [LoginController::class, 'login'])->name('login');

@@ -54,9 +54,9 @@ return [
     |
     */
 
-    // 'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://janien0116.github.io'),
 
-    'url' => 'https://janien0116.github.io',
+    // 'url' => 'https://janien0116.github.io',
 
     'asset_url' => env('ASSET_URL'),
 
