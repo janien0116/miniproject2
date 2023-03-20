@@ -47,10 +47,6 @@
                 </div>
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
-                    {{-- <div class="form-group">
-                        <label for="joiner-login-name">Username:</label>
-                        <input type ="text" id="login-username" name="name" placeholder="Enter Username" required autofocus>
-                    </div> --}}
                     <div class="form-group">
                         <label for="email">E-mail Address:</label>
                         <input type ="email" id="login-email" name="email" placeholder="Enter Email" required>

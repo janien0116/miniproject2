@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="{{ asset('css/media-queries.css') }}">
     <script src="https://kit.fontawesome.com/5f8be564ce.js" crossorigin="anonymous"></script>
 </head>
+
 <body id="destinations">
     <div class="body-pattern">
         <header id="other-page-header">
@@ -18,25 +20,32 @@
                 <ul>
                     <input type="checkbox" id="menu-toggler" />
                     <label id="toggler-label" for="menu-toggler"><i class="fa-solid fa-bars"></i></label>
-                  <div class="div-logo">
-                    <a href="{{ route('home') }}">
-                      <img src="images/logo1.png" id="logo" width="200px">
-                    </a>
-                  </div>
-                  <li id="user-li">
-                    <label class="stored-user" name="name">{{ session('name') }}</label>
-                  </li>
-                  <div id="li-div">
-                      <li>
-                        <a href="#" data-target="destinations" class="active">Destinations</a>
-                      </li>
-                      <li>
-                        <a href="{{ route('tour_history') }}" data-target="history">Tour History</a>
-                      </li>
-                      <li>
-                        <a href="">Log out</a>
+                    <div class="div-logo">
+                        <a href="{{ route('home') }}">
+                            <img src="images/logo1.png" id="logo" width="200px">
+                        </a>
+                    </div>
+                    <li id="user-li">
+                        <label class="stored-user" name="name">{{ session('name') }}</label>
                     </li>
-                  </div>
+                    <div id="li-div">
+                        <li>
+                            <a href="#" data-target="destinations" class="active">Destinations</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('tour_history') }}" data-target="history">Tour History</a>
+                        </li>
+                        @if (Auth::user())
+                            <li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"">
+                                    @csrf
+                                    <a class="log-out-btn" href="#"
+                                        onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                        Logout </a>
+                                </form>
+                            </li>
+                        @endif
+                    </div>
                 </ul>
             </nav>
         </header>
@@ -50,22 +59,24 @@
                 <div class="tours">
                     <div class="by-two">
                         <div class="card" id="card1">
-                        <!-- <form action="pass_value.php" method="post"> -->
+                            <!-- <form action="pass_value.php" method="post"> -->
                             <h3 class="dest-value">La Union</h3>
                             <div class="carousel">
-                                <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i></div>
+                                <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
+                                </div>
                                 <div class="img-div">
                                     <img src="images/la-union.jpg" class="carousel-item">
                                     <img src="images/la-union2.jpg" class="carousel-item">
                                     <img src="images/la-union3.jpg" class="carousel-item">
                                     <img src="images/la-union4.jpg" class="carousel-item">
                                 </div>
-                                <div class="carousel-arrow" id="right-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                                <div class="carousel-arrow" id="right-arrow"><i class="fa-solid fa-chevron-right"></i>
+                                </div>
                                 <div class="inclusions">
-                                    <p>3D2N / 2D1N</p>  
-                                    <p>Tour Dates: 
-                                        <label class="first-date">4/03/2023</label>, 
-                                        <label class="second-date">4/05/2023</label>, 
+                                    <p>3D2N / 2D1N</p>
+                                    <p>Tour Dates:
+                                        <label class="first-date">4/03/2023</label>,
+                                        <label class="second-date">4/05/2023</label>,
                                         <label class="third-date">4/10/2023</label>
                                     </p>
                                     <ul class="include">
@@ -82,24 +93,26 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn-book-tour">Book This Tour</button>
-                        <!-- </form> -->
+                            <!-- </form> -->
                         </div>
                         <div class="card" id="card2">
                             <h3 class="dest-value">Puerto Galera</h3>
                             <div class="carousel">
-                                <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i></div>
+                                <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
+                                </div>
                                 <div class="img-div">
                                     <img src="images/puerto-galera.jpg" class="carousel-item">
                                     <img src="images/puerto-galera2.jpg" class="carousel-item">
                                     <img src="images/puerto-galera3.jpg" class="carousel-item">
                                     <img src="images/puerto-galera4.jpg" class="carousel-item">
                                 </div>
-                                <div class="carousel-arrow" id="right-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                                <div class="carousel-arrow" id="right-arrow"><i class="fa-solid fa-chevron-right"></i>
+                                </div>
                                 <div class="inclusions">
                                     <p>3D2N / 2D1N</p>
-                                    <p>Tour Dates: 
-                                        <label class="first-date">5/12/2023</label>, 
-                                        <label class="second-date">5/15/2023</label>, 
+                                    <p>Tour Dates:
+                                        <label class="first-date">5/12/2023</label>,
+                                        <label class="second-date">5/15/2023</label>,
                                         <label class="third-date">5/20/2023</label>
                                     </p>
                                     <ul class="include">
@@ -120,22 +133,24 @@
                     </div>
                     <div class="by-two">
                         <div class="card" id="card3">
-                        <!-- <form action="pass_value.php" method="post"> -->
+                            <!-- <form action="pass_value.php" method="post"> -->
                             <h3 class="dest-value">Sagada</h3>
                             <div class="carousel">
-                                <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i></div>
+                                <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
+                                </div>
                                 <div class="img-div">
                                     <img src="images/sagada.jpg" class="carousel-item">
                                     <img src="images/sagada2.jpg" class="carousel-item">
                                     <img src="images/sagada3.jpg" class="carousel-item">
                                     <img src="images/sagada4.jpg" class="carousel-item">
                                 </div>
-                                <div class="carousel-arrow" id="right-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                                <div class="carousel-arrow" id="right-arrow"><i
+                                        class="fa-solid fa-chevron-right"></i></div>
                                 <div class="inclusions">
-                                    <p>3D2N / 2D1N</p>  
-                                    <p>Tour Dates: 
-                                        <label class="first-date">3/20/2023</label>, 
-                                        <label class="second-date">3/25/2023</label>, 
+                                    <p>3D2N / 2D1N</p>
+                                    <p>Tour Dates:
+                                        <label class="first-date">3/20/2023</label>,
+                                        <label class="second-date">3/25/2023</label>,
                                         <label class="third-date">3/31/2023</label>
                                     </p>
                                     <ul class="include">
@@ -152,24 +167,26 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn-book-tour">Book This Tour</button>
-                        <!-- </form> -->
+                            <!-- </form> -->
                         </div>
                         <div class="card" id="card4">
                             <h3 class="dest-value">Ilocos</h3>
                             <div class="carousel">
-                                <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i></div>
+                                <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
+                                </div>
                                 <div class="img-div">
                                     <img src="images/ilocos1.jpg" class="carousel-item">
                                     <img src="images/ilocos2.jpg" class="carousel-item">
                                     <img src="images/ilocos3.jpg" class="carousel-item">
                                     <img src="images/ilocos4.jpg" class="carousel-item">
                                 </div>
-                                <div class="carousel-arrow" id="right-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                                <div class="carousel-arrow" id="right-arrow"><i
+                                        class="fa-solid fa-chevron-right"></i></div>
                                 <div class="inclusions">
                                     <p>3D2N / 2D1N</p>
-                                    <p>Tour Dates: 
-                                        <label class="first-date">4/16/2023</label>, 
-                                        <label class="second-date">4/21/2023</label>, 
+                                    <p>Tour Dates:
+                                        <label class="first-date">4/16/2023</label>,
+                                        <label class="second-date">4/21/2023</label>,
                                         <label class="third-date">4/26/2023</label>
                                     </p>
                                     <ul class="include">
@@ -196,14 +213,15 @@
         var booktourUrl = "{{ route('book_tour') }}";
         const currentPage = document.querySelector('body').id;
         const navLinks = document.querySelectorAll('nav li a');
-        
+
         navLinks.forEach(link => {
-          if (link.dataset.target === currentPage) {
-            link.classList.add('active');
-          }
+            if (link.dataset.target === currentPage) {
+                link.classList.add('active');
+            }
         });
     </script>
     <script src="{{ asset('js/destinations-script.js') }}"></script>
     <script src="{{ asset('js/flexible.js') }}"></script>
 </body>
+
 </html>
