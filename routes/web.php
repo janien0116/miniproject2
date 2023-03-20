@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookedTourController;
+use App\Http\Controllers\JoinerController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Auth;
 
