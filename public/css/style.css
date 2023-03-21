@@ -52,18 +52,12 @@ nav ul{
     flex: 4;
     cursor: pointer;
 }
-#booktour .div-logo{
-    flex: 5;
-}
 #li-div{
     display: flex;
     justify-content: space-between;
     flex: 3;
     overflow-x: hidden;
     width: max-content;
-}
-#booktour #li-div{
-    flex: 2;
 }
 nav li{
     position: relative;

@@ -22,12 +22,6 @@
     }
   }
   @media screen and (max-width: 800px) {
-    #booktour .div-logo{
-        flex: 4;
-    }
-    #booktour #li-div{
-        flex: 3;
-    }
     .by-two{
         display: block;
     }
