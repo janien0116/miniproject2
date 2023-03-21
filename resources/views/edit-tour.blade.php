@@ -158,6 +158,7 @@
             <div class="editour-img-b2"></div>
         </div>
     </main>
+    @include('footer')
     <script>
         const RADIO_3D = document.querySelector("#three-days");
         const RADIO_2D = document.querySelector("#two-days");

@@ -105,6 +105,7 @@
             @endforeach
         </div>
     </main>
+    @include('footer')
     <script src="{{ asset('js/flexible.js') }}"></script>
     <script src="{{ asset('js/tour-history.js') }}"></script>
 </body>

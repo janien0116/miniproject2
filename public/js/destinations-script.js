@@ -87,6 +87,21 @@ for(let i = 0; i < next.length; i++){
   }
 }
 
+const searchInput = document.getElementById("search");
+const cards = document.querySelectorAll(".card");
+const LABEL_ERROR = document.querySelector("#search-error");
 
-
+searchInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    const destValue = this.value.toLowerCase();
+    const matchingCard = Array.from(cards).find(function (card) {
+      return card.querySelector('.dest-value').getAttribute("data-destination").toLowerCase() === destValue;
+    });
+    if (matchingCard) {
+      matchingCard.scrollIntoView({ behavior: "smooth" });
+    } else {
+      LABEL_ERROR.textContent = "Sorry, we don't have that tour yet. Try searching for others.";
+    }
+  }
+});
 

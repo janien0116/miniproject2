@@ -60,6 +60,11 @@
             </div>
         </div>
     </header>
+    <footer id="index-footer">
+        <div>
+            <p>Copyright &copy; 2023 Joiner's Portal - All Rights Reserved</p>
+        </div>
+    </footer>
     <script>
         var signinUrl = "{{ route('sign_in') }}";
         var destnationUrl = "{{ route('tour_places') }}";
@@ -67,5 +72,4 @@
     <script src="{{ asset('js/home.js') }}"></script>
     <script src="{{ asset('js/flexible.js') }}"></script>
 </body>
-
 </html>

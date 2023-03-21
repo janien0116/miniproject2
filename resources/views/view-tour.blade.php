@@ -105,6 +105,7 @@
                 </div>
             </form>
     </main>
+    @include('footer')
     <script src="{{ asset('js/flexible.js') }}"></script>
 </body>
 

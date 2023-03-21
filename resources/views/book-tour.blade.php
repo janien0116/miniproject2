@@ -166,6 +166,7 @@
             <div class="listour-img-b2"></div>
         </div>
     </main>
+    @include('footer')
     <script>
         const inclusions = localStorage.getItem("output_inclusions");
         const inclusionList = document.getElementById("inclusion-ul");
