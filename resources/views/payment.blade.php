@@ -31,7 +31,7 @@
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <div class="container text-center w-50">
+                        <div class="container text-center w-50" id="accordion-container">
                             <div class="row mb-3">
                                 <div class="col-6">
                                     G-Cash Account Name:
@@ -49,10 +49,10 @@
                                 </div>
                             </div>
                             <div class="row mb-3 align-items-center">
-                                <div class="col-6">
+                                <div class="col-lg-6 col-sm-12">
                                     Input Reference Number:
                                 </div>
-                                <div class="col-6 d-flex flex-row">
+                                <div class="col-lg-6 d-lg-flex flex-row d-sm-block">
                                     <input type="number" class="ps-1">
                                     <button type="button" class="btn btn-info">Send</button>
                                 </div>
@@ -71,7 +71,7 @@
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <div class="container text-center w-50">
+                        <div class="container text-center w-50" id="accordion-container">
                             <div class="row mb-3">
                                 <div class="col-6">
                                     BPI Account Name:
@@ -89,10 +89,10 @@
                                 </div>
                             </div>
                             <div class="row mb-3 align-items-center">
-                                <div class="col-6">
+                                <div class="col-lg-6 col-sm-12">
                                     Input Reference Number:
                                 </div>
-                                <div class="col-6 d-flex flex-row">
+                                <div class="col-lg-6 d-lg-flex flex-row d-sm-block">
                                     <input type="number" class="ps-1">
                                     <button type="button" class="btn btn-info">Send</button>
                                 </div>
@@ -111,7 +111,7 @@
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <div class="container text-center w-50">
+                        <div class="container text-center w-50" id="accordion-container">
                             <div class="row mb-3">
                                 <div class="col-6">
                                     BDO Account Name:
@@ -129,10 +129,10 @@
                                 </div>
                             </div>
                             <div class="row mb-3 align-items-center">
-                                <div class="col-6">
+                                <div class="col-lg-6 col-sm-12">
                                     Input Reference Number:
                                 </div>
-                                <div class="col-6 d-flex flex-row">
+                                <div class="col-lg-6 d-lg-flex flex-row d-sm-block">
                                     <input type="number" class="ps-1">
                                     <button type="button" class="btn btn-info">Send</button>
                                 </div>
@@ -151,7 +151,7 @@
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <div class="container text-center w-50">
+                        <div class="container text-center w-50" id="accordion-container">
                             <div class="row mb-3">
                                 <div class="col-6">
                                     ShopeePay Account Name:
@@ -169,10 +169,10 @@
                                 </div>
                             </div>
                             <div class="row mb-3 align-items-center">
-                                <div class="col-6">
+                                <div class="col-lg-6 col-sm-12">
                                     <label for="formFile" class="form-label">Upload Proof of Payment</label>
                                 </div>
-                                <div class="col-6 d-flex flex-row">
+                                <div class="col-lg-6 d-lg-flex flex-row d-sm-block">
                                     <input class="form-control" type="file" id="formFile" accept="image/*">
                                 </div>
                             </div>
@@ -190,7 +190,7 @@
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <div class="container text-center w-50">
+                        <div class="container text-center w-50" id="accordion-container">
                             <div class="row mb-3">
                                 <div class="col-6">
                                     Paypal Account Name:
@@ -208,10 +208,10 @@
                                 </div>
                             </div>
                             <div class="row mb-3 align-items-center">
-                                <div class="col-6">
+                                <div class="col-lg-6 col-sm-12">
                                     <label for="formFile" class="form-label">Upload Proof of Payment</label>
                                 </div>
-                                <div class="col-6 d-flex flex-row">
+                                <div class="col-lg-6 d-lg-flex flex-row d-sm-block">
                                     <input class="form-control" type="file" id="formFile" accept="image/*">
                                 </div>
                             </div>

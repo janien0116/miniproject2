@@ -55,11 +55,9 @@
             </div>
             @foreach ($booked_tours as $booked_tour)
                 <div class="div-tour-details">
-                    <div class="payment-img-group">
-                        <label id="payment-desc">Pending Payment Verification</label>
-                        <img src="images/destination-placeholder.png" class="tour-placeholder" width="200px"
-                            height="180px">
-                    </div>
+                    <p id="payment-desc">*Pending Payment Verification</p>
+                    <img src="images/destination-placeholder.png" class="tour-placeholder" width="200px"
+                        height="180px">
                     <div class="tour-details">
                         <div class="form-group">
                             <label class="booked-label">Booked By: </label>
@@ -92,16 +90,22 @@
                         </div>
                     </div>
                     <div class="button-group">
-                        <form action="{{ route('view_tour', $booked_tour->id) }}" method="GET">
-                            <button type="submit" id="view-details">View Full Details</button>
+                        <form action="{{ route('view_tour', $booked_tour->id) }}" method="GET" id="view-details">
+                            <a href="#"
+                                onclick="event.preventDefault();document.getElementById('view-details').submit();">
+                                View Full Details</a>
                         </form>
-                        <form action="{{ route('edit_tour', $booked_tour->id) }}" method="GET">
-                            <button type="submit" id="edit-tour">Edit This Tour</button>
+                        <form action="{{ route('edit_tour', $booked_tour->id) }}" method="GET" id="edit-tour">
+                            <a href="#"
+                                onclick="event.preventDefault();document.getElementById('edit-tour').submit();">
+                                Edit This Tour</a>
                         </form>
                         <form action="{{ route('delete_tour', $booked_tour) }}" method="POST" id="delete-tour">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" id="edit-tour">Delete This Tour</button>
+                            <a href="#"
+                                onclick="event.preventDefault();document.getElementById('delete-tour').submit();">
+                                Delete This Tour</a>
                         </form>
                     </div>
                 </div>

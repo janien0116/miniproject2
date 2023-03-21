@@ -594,14 +594,17 @@ input[type=number]::-webkit-inner-spin-button {
     background: rgb(67,217,192);
     background: linear-gradient(90deg, rgba(67,217,192,0.8) 0%, rgba(238,213,144,0.8) 80%);
     border-radius: 15px;
+    position: relative;
 }
 #payment-desc{
+    position: absolute;
+    top: 5px;
     font-family: 'Shantell Sans', cursive;
     color:#223656;
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: #f04a4a;
 }
-.payment-img-group{
+.div-tour-details img{
     flex: 1;
 }
 .tour-details{
@@ -640,25 +643,33 @@ input[type=number]::-webkit-inner-spin-button {
     display: flex;
     flex-direction: column;
     align-content: space-around;
+    justify-content: stretch;
     margin-left: 15px;
     flex: 1;
 }
-.button-group button{
+.button-group form{
+    text-align: center;
     margin-bottom: 10px;
     cursor: pointer;
     padding: 10px 15px;
     border: 2px solid #223656;
-    font-family: 'Montserrat', sans-serif;
     background-color:#F08C4A;
+}
+.button-group form a{
+    font-family: 'Montserrat', sans-serif;
     color:#223656;
     font-size: 0.9em;
 }
-.button-group button:hover{
+.button-group form:hover{
     background-color: #EED590;
+}
+.button-group form a:hover{
     color: #f04a4a;
 }
 #delete-tour:hover{
     background-color: #f04a4a;
+}
+#delete-tour a:hover{
     color: #EED590;
 }
 
