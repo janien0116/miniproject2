@@ -71,7 +71,7 @@
     }
     .hero-image {
         height: 100vh;
-        background-image: url("images/hero-bg2.jpg");
+        background-image: url("../images/hero-bg2.jpg");
     }
     .hero-text {
         height: 80vh;
@@ -165,6 +165,9 @@
     }
     #div-view-tour .form-group{
         margin-top: 10px;
+    }
+    #index-footer{
+        display: none;
     }
 }
 @media screen and (max-width: 500px) {

@@ -37,10 +37,10 @@
                     @if (Auth::user())
                         <li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"">
-                            @csrf
+                                @csrf
                                 <a class="log-out-btn" href="#"
-                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                Logout </a>
+                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    Logout </a>
                             </form>
                         </li>
                     @endif
@@ -55,8 +55,11 @@
             </div>
             @foreach ($booked_tours as $booked_tour)
                 <div class="div-tour-details">
-                    <img src="images/destination-placeholder.png" class="tour-placeholder" width="200px"
-                        height="180px">
+                    <div class="payment-img-group">
+                        <label id="payment-desc">Pending Payment Verification</label>
+                        <img src="images/destination-placeholder.png" class="tour-placeholder" width="200px"
+                            height="180px">
+                    </div>
                     <div class="tour-details">
                         <div class="form-group">
                             <label class="booked-label">Booked By: </label>

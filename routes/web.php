@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('index');
 })->name('home');
 
+Route::get('/payment', function () {
+    return view('payment');
+})->name('payment');
+
 Route::get('/signin', function () {
     return view('signin');
 })->name('sign_in');

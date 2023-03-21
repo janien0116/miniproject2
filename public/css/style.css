@@ -595,7 +595,13 @@ input[type=number]::-webkit-inner-spin-button {
     background: linear-gradient(90deg, rgba(67,217,192,0.8) 0%, rgba(238,213,144,0.8) 80%);
     border-radius: 15px;
 }
-.div-tour-details img{
+#payment-desc{
+    font-family: 'Shantell Sans', cursive;
+    color:#223656;
+    font-size: 0.8em;
+    color: #f04a4a;
+}
+.payment-img-group{
     flex: 1;
 }
 .tour-details{

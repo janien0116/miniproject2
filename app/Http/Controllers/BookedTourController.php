@@ -28,7 +28,7 @@ class BookedTourController extends Controller
         $bookedTour->BookedBy = $request->input('BookedBy');
         $bookedTour->name = $request->input('username');
         if ($bookedTour->save()) {
-            return redirect()->route('tour_history');
+            return redirect()->route('payment');
         } else {
             return back()->withErrors([
                 'error' => 'There was an error while booking the tour. Please try again.',
