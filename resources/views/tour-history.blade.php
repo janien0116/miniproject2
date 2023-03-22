@@ -96,13 +96,13 @@
                         <div>
                             <a href="{{ route('edit_tour', $booked_tour->id) }}">Edit This Tour</a>
                         </div>
-                        <form action="{{ route('delete_tour', $booked_tour) }}" method="POST" id="delete-tour">
+                        <form action="{{ route('delete_tour', $booked_tour) }}" method="POST" id="delete-tour-{{ $booked_tour->id }}">
                             @method('DELETE')
                             @csrf
-                            <a href="#"
-                                onclick="event.preventDefault();document.getElementById('delete-tour').submit();">
-                                Delete This Tour</a>
-                        </form>
+                            <a href="{{ route('delete_tour', $booked_tour) }}" onclick="event.preventDefault();document.getElementById('delete-tour-{{ $booked_tour->id }}').submit();">
+                                Delete This Tour
+                            </a>
+                        </form>                        
                     </div>
                 </div>
             @endforeach

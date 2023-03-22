@@ -53,7 +53,7 @@
                                     Input Reference Number:
                                 </div>
                                 <div class="col-lg-6 d-lg-flex flex-row d-sm-block">
-                                    <input type="number" class="ps-1">
+                                    <input type="number" class="ps-1" required minlength="11" maxlength="11">
                                     <button type="button" class="btn btn-info">Send</button>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
                                     Input Reference Number:
                                 </div>
                                 <div class="col-lg-6 d-lg-flex flex-row d-sm-block">
-                                    <input type="number" class="ps-1">
+                                    <input type="number" class="ps-1" required minlength="11" maxlength="11">
                                     <button type="button" class="btn btn-info">Send</button>
                                 </div>
                             </div>
@@ -133,7 +133,7 @@
                                     Input Reference Number:
                                 </div>
                                 <div class="col-lg-6 d-lg-flex flex-row d-sm-block">
-                                    <input type="number" class="ps-1">
+                                    <input type="number" class="ps-1" minlength="11" maxlength="11">
                                     <button type="button" class="btn btn-info">Send</button>
                                 </div>
                             </div>

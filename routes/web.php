@@ -53,6 +53,6 @@ Route::put('/tour/update/{id}', [BookedTourController::class, 'update'])->name('
 
 Route::get('/tour/view/{id}', [BookedTourController::class, 'show'])->name('view_tour');
 
-Route::delete('/tour/delete/{id}', [BookedTourController::class, 'destroy'])->name('delete_tour');
+Route::delete('/tour/delete/{booked_tour}', [BookedTourController::class, 'destroy'])->name('delete_tour');
 
 Route::post('/logout', [LoginController::class, 'logout'])->middleware(['auth'])->name('logout');

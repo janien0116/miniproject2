@@ -19,3 +19,5 @@ divTourDetails.forEach((tourDetail, index) => {
       destinationImg[index].src = 'images/destination-placeholder.png';
     }
   });
+
+  

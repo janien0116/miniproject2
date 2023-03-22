@@ -65,8 +65,9 @@ class BookedTourController extends Controller
         return view('view-tour', ['booked_tour' => $data]);
     }
     
-    function destroy($id){
-        BookedTour::destroy($id);
+    function destroy(BookedTour $booked_tour){
+        $booked_tour->delete();
         return redirect()->route('tour_history');
     }
+    
 }
