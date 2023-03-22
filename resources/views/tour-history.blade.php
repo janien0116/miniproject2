@@ -86,20 +86,16 @@
                         </div>
                         <div class="form-group">
                             <label class="booked-label">Reference No: </label>
-                            <label class="booked-output">{{ $booked_tour->ReferenceNo }}</label>
+                            <label class="booked-output" name="ReferenceNo">{{ $booked_tour->ReferenceNo }}</label>
                         </div>
                     </div>
                     <div class="button-group">
-                        <form action="{{ route('view_tour', $booked_tour->id) }}" method="GET" id="view-details">
-                            <a href="#"
-                                onclick="event.preventDefault();document.getElementById('view-details').submit();">
-                                View Full Details</a>
-                        </form>
-                        <form action="{{ route('edit_tour', $booked_tour->id) }}" method="GET" id="edit-tour">
-                            <a href="#"
-                                onclick="event.preventDefault();document.getElementById('edit-tour').submit();">
-                                Edit This Tour</a>
-                        </form>
+                        <div>
+                            <a href="{{ route('view_tour', $booked_tour->id) }}">View Full Details</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('edit_tour', $booked_tour->id) }}">Edit This Tour</a>
+                        </div>
                         <form action="{{ route('delete_tour', $booked_tour) }}" method="POST" id="delete-tour">
                             @method('DELETE')
                             @csrf

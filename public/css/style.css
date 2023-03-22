@@ -641,7 +641,7 @@ input[type=number]::-webkit-inner-spin-button {
     margin-left: 15px;
     flex: 1;
 }
-.button-group form{
+.button-group div, #delete-tour{
     text-align: center;
     margin-bottom: 10px;
     cursor: pointer;
@@ -649,15 +649,15 @@ input[type=number]::-webkit-inner-spin-button {
     border: 2px solid #223656;
     background-color:#F08C4A;
 }
-.button-group form a{
+.button-group div a, #delete-tour a{
     font-family: 'Montserrat', sans-serif;
     color:#223656;
     font-size: 0.9em;
 }
-.button-group form:hover{
+.button-group div:hover{
     background-color: #EED590;
 }
-.button-group form a:hover{
+.button-group div a:hover{
     color: #f04a4a;
 }
 #delete-tour:hover{
