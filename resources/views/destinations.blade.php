@@ -625,9 +625,9 @@
                         </div>
                         <button class="btn-book-tour">Book This Tour</button>
                     </div>
-                    {{-- caramoan --}}
+                    {{-- intramuros --}}
                     <div class="card" id="card4">
-                        <h3 class="dest-value">Caramoan</h3>
+                        <h3 class="dest-value">Intramuros</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -649,9 +649,9 @@
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
-                                    <li>Free Caramoan Sidetrip</li>
+                                    <li>Free Intramuros Sidetrip</li>
                                     <li>AC Room Accomodation</li>
-                                    <li>Caramoan Tour</li>
+                                    <li>Intramuros Tour</li>
                                     <li>Driver & Guide Fees</li>
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
