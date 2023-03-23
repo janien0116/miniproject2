@@ -37,7 +37,7 @@
                         </li>
                         @if (Auth::user())
                             <li>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"">
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                     @csrf
                                     <a class="log-out-btn" href="#"
                                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -204,6 +204,43 @@
                             </div>
                             <button class="btn-book-tour">Book This Tour</button>
                         </div>
+                        {{-- 11111111111111111111111111111111111111111111111111 --}}
+                        <div class="card" id="card4">
+                            <h3 class="dest-value">Ilocos</h3>
+                            <div class="carousel">
+                                <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
+                                </div>
+                                <div class="img-div">
+                                    <img src="images/ilocos1.jpg" class="carousel-item">
+                                    <img src="images/ilocos2.jpg" class="carousel-item">
+                                    <img src="images/ilocos3.jpg" class="carousel-item">
+                                    <img src="images/ilocos4.jpg" class="carousel-item">
+                                </div>
+                                <div class="carousel-arrow" id="right-arrow"><i
+                                        class="fa-solid fa-chevron-right"></i></div>
+                                <div class="inclusions">
+                                    <p>3D2N / 2D1N</p>
+                                    <p>Tour Dates:
+                                        <label class="first-date">4/16/2023</label>,
+                                        <label class="second-date">4/21/2023</label>,
+                                        <label class="third-date">4/26/2023</label>
+                                    </p>
+                                    <ul class="include">
+                                        <li>RT Premium Van Transfers</li>
+                                        <li>Free La Union Sidetrip</li>
+                                        <li>AC Room Accomodation</li>
+                                        <li>Vigan-Laoag-Pagudpud Tour</li>
+                                        <li>Driver & Guide Fees</li>
+                                        <li>Gas, Toll & Parking Fees</li>
+                                    </ul>
+                                    <br>
+                                    <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
+                                    <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                </div>
+                            </div>
+                            <button class="btn-book-tour">Book This Tour</button>
+                        </div>
+                        
                     </div>
                 </div>
             </form>
