@@ -31,7 +31,7 @@
                     </li>
                     @if (Auth::user())
                         <li>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST"">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf
                                 <a class="log-out-btn" href="#"
                                     onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -104,7 +104,9 @@
                     </div>
                 </div>
             </form>
+        </div>
     </main>
+    @include('footer')
     <script src="{{ asset('js/flexible.js') }}"></script>
 </body>
 

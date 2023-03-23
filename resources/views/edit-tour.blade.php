@@ -102,7 +102,7 @@
                     <div class="form-group">
                         <label>Choose Pick-Up Location</label>
                         <select id="pick-up-loc" name="PickupPoint" class="pick-up-loc">
-                            <option value={{ $booked_tour->PickupPoint }}>{{ $booked_tour->PickupPoint }}</option>
+                            <option value="{{ $booked_tour->PickupPoint }}">{{ $booked_tour->PickupPoint }} </option>
                             <option value="Robinsons Galleria">Robinsons Galleria</option>
                             <option value="SM Sta Rosa">SM Sta Rosa</option>
                             <option value="Alabang Festival Mall">Alabang Festival Mall</option>
@@ -114,7 +114,7 @@
                     <div class="form-group">
                         <label>Choose Pick-Up Time</label>
                         <select id="pick-up-time" name="PickupTime" class="pickup-time">
-                            <option value={{ $booked_tour->PickupTime }}>{{ $booked_tour->PickupTime }}</option>
+                            <option value="{{ $booked_tour->PickupTime }}">{{ $booked_tour->PickupTime }}</option>
                             <option value="4:00am">4:00am</option>
                             <option value="6:00am">6:00am</option>
                             <option value="6:00pm">6:00pm</option>
@@ -158,6 +158,7 @@
             <div class="editour-img-b2"></div>
         </div>
     </main>
+    @include('footer')
     <script>
         const RADIO_3D = document.querySelector("#three-days");
         const RADIO_2D = document.querySelector("#two-days");

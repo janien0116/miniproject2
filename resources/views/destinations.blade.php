@@ -50,17 +50,19 @@
             </nav>
         </header>
         <main>
-            <form>
                 <div class="search-tour">
                     <label for="search">Search</label>
-                    <input name="search" type="text" id="search" placeholder="Search destinations">
+                    <input name="search" type="text" id="search" placeholder="Search destinations" autofocus>
                     <button><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+                </div>
+                <div id="error-display">
+                    <label id="search-error"></label>
                 </div>
                 <div class="tours">
                     <div class="by-two">
                         <div class="card" id="card1">
                             <!-- <form action="pass_value.php" method="post"> -->
-                            <h3 class="dest-value">La Union</h3>
+                            <h3 class="dest-value" data-destination="la union">La Union</h3>
                             <div class="carousel">
                                 <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                                 </div>
@@ -96,7 +98,7 @@
                             <!-- </form> -->
                         </div>
                         <div class="card" id="card2">
-                            <h3 class="dest-value">Puerto Galera</h3>
+                            <h3 class="dest-value" data-destination="puerto galera">Puerto Galera</h3>
                             <div class="carousel">
                                 <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                                 </div>
@@ -134,7 +136,7 @@
                     <div class="by-two">
                         <div class="card" id="card3">
                             <!-- <form action="pass_value.php" method="post"> -->
-                            <h3 class="dest-value">Sagada</h3>
+                            <h3 class="dest-value" data-destination="sagada">Sagada</h3>
                             <div class="carousel">
                                 <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                                 </div>
@@ -170,7 +172,7 @@
                             <!-- </form> -->
                         </div>
                         <div class="card" id="card4">
-                            <h3 class="dest-value">Ilocos</h3>
+                            <h3 class="dest-value" data-destination="ilocos">Ilocos</h3>
                             <div class="carousel">
                                 <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                                 </div>
@@ -243,9 +245,9 @@
                         
                     </div>
                 </div>
-            </form>
         </main>
     </div>
+    @include('footer')
     <script>
         var booktourUrl = "{{ route('book_tour') }}";
         const currentPage = document.querySelector('body').id;

@@ -37,10 +37,10 @@
                     @if (Auth::user())
                         <li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST"">
-                            @csrf
+                                @csrf
                                 <a class="log-out-btn" href="#"
-                                onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                Logout </a>
+                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    Logout </a>
                             </form>
                         </li>
                     @endif
@@ -55,6 +55,7 @@
             </div>
             @foreach ($booked_tours as $booked_tour)
                 <div class="div-tour-details">
+                    <p id="payment-desc">*Pending Payment Verification</p>
                     <img src="images/destination-placeholder.png" class="tour-placeholder" width="200px"
                         height="180px">
                     <div class="tour-details">
@@ -85,26 +86,29 @@
                         </div>
                         <div class="form-group">
                             <label class="booked-label">Reference No: </label>
-                            <label class="booked-output">{{ $booked_tour->ReferenceNo }}</label>
+                            <label class="booked-output" name="ReferenceNo">{{ $booked_tour->ReferenceNo }}</label>
                         </div>
                     </div>
                     <div class="button-group">
-                        <form action="{{ route('view_tour', $booked_tour->id) }}" method="GET">
-                            <button type="submit" id="view-details">View Full Details</button>
-                        </form>
-                        <form action="{{ route('edit_tour', $booked_tour->id) }}" method="GET">
-                            <button type="submit" id="edit-tour">Edit This Tour</button>
-                        </form>
-                        <form action="{{ route('delete_tour', $booked_tour) }}" method="POST" id="delete-tour">
+                        <div>
+                            <a href="{{ route('view_tour', $booked_tour->id) }}">View Full Details</a>
+                        </div>
+                        <div>
+                            <a href="{{ route('edit_tour', $booked_tour->id) }}">Edit This Tour</a>
+                        </div>
+                        <form action="{{ route('delete_tour', $booked_tour) }}" method="POST" id="delete-tour-{{ $booked_tour->id }}">
                             @method('DELETE')
                             @csrf
-                            <button type="submit" id="edit-tour">Delete This Tour</button>
-                        </form>
+                            <a href="{{ route('delete_tour', $booked_tour) }}" onclick="event.preventDefault();document.getElementById('delete-tour-{{ $booked_tour->id }}').submit();">
+                                Delete This Tour
+                            </a>
+                        </form>                        
                     </div>
                 </div>
             @endforeach
         </div>
     </main>
+    @include('footer')
     <script src="{{ asset('js/flexible.js') }}"></script>
     <script src="{{ asset('js/tour-history.js') }}"></script>
 </body>

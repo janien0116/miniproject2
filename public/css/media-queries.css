@@ -22,14 +22,11 @@
     }
   }
   @media screen and (max-width: 800px) {
-    #booktour .div-logo{
-        flex: 4;
-    }
-    #booktour #li-div{
-        flex: 3;
-    }
     .by-two{
         display: block;
+    }
+    #accordion-container{
+        width: 100% !important;
     }
   }
 @media screen and (max-width: 700px) {
@@ -71,7 +68,7 @@
     }
     .hero-image {
         height: 100vh;
-        background-image: url("images/hero-bg2.jpg");
+        background-image: url("../images/hero-bg2.jpg");
     }
     .hero-text {
         height: 80vh;
@@ -166,6 +163,9 @@
     #div-view-tour .form-group{
         margin-top: 10px;
     }
+    #index-footer{
+        display: none;
+    }
 }
 @media screen and (max-width: 500px) {
     .div-tour-details{
@@ -181,7 +181,7 @@
         background: rgb(67,217,192);
         background: linear-gradient(90deg, rgba(67,217,192,0.8) 0%, rgba(238,213,144,0.8) 80%);
     }
-    .tour-details label{
+    .tour-details label, #payment-desc{
         font-size: 0.8em;
     }
     .button-group{

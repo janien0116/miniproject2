@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookedTourController;
+use App\Http\Controllers\JoinerController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,6 +20,10 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', function () {
     return view('index');
 })->name('home');
+
+Route::get('/payment', function () {
+    return view('payment');
+})->name('payment');
 
 Route::get('/signin', function () {
     return view('signin');
@@ -48,6 +53,6 @@ Route::put('/tour/update/{id}', [BookedTourController::class, 'update'])->name('
 
 Route::get('/tour/view/{id}', [BookedTourController::class, 'show'])->name('view_tour');
 
-Route::delete('/tour/delete/{id}', [BookedTourController::class, 'destroy'])->name('delete_tour');
+Route::delete('/tour/delete/{booked_tour}', [BookedTourController::class, 'destroy'])->name('delete_tour');
 
 Route::post('/logout', [LoginController::class, 'logout'])->middleware(['auth'])->name('logout');

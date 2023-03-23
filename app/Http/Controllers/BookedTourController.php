@@ -28,7 +28,7 @@ class BookedTourController extends Controller
         $bookedTour->BookedBy = $request->input('BookedBy');
         $bookedTour->name = $request->input('username');
         if ($bookedTour->save()) {
-            return redirect()->route('tour_history');
+            return redirect()->route('payment');
         } else {
             return back()->withErrors([
                 'error' => 'There was an error while booking the tour. Please try again.',
@@ -65,8 +65,9 @@ class BookedTourController extends Controller
         return view('view-tour', ['booked_tour' => $data]);
     }
     
-    function destroy($id){
-        BookedTour::destroy($id);
+    function destroy(BookedTour $booked_tour){
+        $booked_tour->delete();
         return redirect()->route('tour_history');
     }
+    
 }

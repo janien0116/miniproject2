@@ -36,7 +36,7 @@
                     </li>
                     @if (Auth::user())
                         <li>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST"">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf
                                 <a class="log-out-btn" href="#"
                                     onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -70,7 +70,7 @@
                     <div class="form-group">
                         <label>Destination:</label>
                         <div class="form-subgroup">
-                            <input type="text" id="destination" name="Destination" required>
+                            <input type="text" id="destination" name="Destination" required readonly>
                             <button id="btn-change-tour"
                                 onclick="event.preventDefault(); window.location.href='{{ route('tour_places') }}'">Change</button>
                         </div>
@@ -107,11 +107,11 @@
                     </div>
                     <div class="form-group">
                         <label>From:</label>
-                        <input type="date" id="from-date" name="FromDate" required>
+                        <input type="date" id="from-date" name="FromDate" required readonly>
                     </div>
                     <div class="form-group">
                         <label>To:</label>
-                        <input type="date" id="to-date" name="ToDate" required>
+                        <input type="date" id="to-date" name="ToDate" required readonly>
                     </div>
                     <div class="form-group" id="avail-seats">
                         <label>No. of Seats:</label>
@@ -149,7 +149,7 @@
                     <div class="form-group">
                         <label>Tour Price:</label>
                         <div class="form-subgroup" id="input-num">
-                            <input type="number" name="Price" id="amount" required>
+                            <input type="number" name="Price" id="amount" required readonly>
                         </div>
                     </div>
                     <div class="form-group">
@@ -159,13 +159,14 @@
                     </div>
                     <input type="hidden" name="username" id="username" value="{{ session('name') }}">
                     <div class="div-btn-book">
-                        <button id="btn-addtour">Book Tour</button>
+                        <button id="btn-addtour">Proceed to Payment</button>
                     </div>
                 </div>
             </form>
             <div class="listour-img-b2"></div>
         </div>
     </main>
+    @include('footer')
     <script>
         const inclusions = localStorage.getItem("output_inclusions");
         const inclusionList = document.getElementById("inclusion-ul");

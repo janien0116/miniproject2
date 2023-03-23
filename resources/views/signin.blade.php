@@ -113,6 +113,7 @@
             </div>
         </div>
     </main>
+    @include('footer')
     <script>
         const currentPage = document.querySelector('body').id;
         const navLinks = document.querySelectorAll('nav li a');
