@@ -16,18 +16,11 @@ window.onresize = function() {
         LI_DIV.style.display = "none";
     }
 }
-// const ACTIVE_NAV = document.querySelector('.active');
-// const USER_LOGGED1 = document.querySelector('.stored-user');
+const CURRENT_PAGE = document.querySelector('body').id;
+const NAV_LINKS = document.querySelectorAll('nav li a');
 
-// if (USER_LOGGED1.textContent.endsWith('Logged In')){
-//     ACTIVE_NAV.addEventListener('click', function(e){
-//         e.preventDefault();
-//         window.location.href =  `${ACTIVE_NAV.getAttribute('data-target')}.html`;
-//     });
-// } else {
-//     ACTIVE_NAV.addEventListener('click', function(e){
-//         e.preventDefault();
-//         alert("Please Log In First");
-//         window.location.href = 'signin.html';
-//     });
-// }
+NAV_LINKS.forEach(link => {
+    if (link.dataset.target === CURRENT_PAGE) {
+        link.classList.add('active');
+    }
+});

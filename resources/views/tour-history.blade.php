@@ -53,6 +53,9 @@
             <div class="history-title">
                 <h3>Your Tour History</h3>
             </div>
+            <div id="tour-note">
+                <p>Note: Editing and/or Deleting tour/s must be done 2 weeks before the Tour Date to prevent inconvenience. Thank you.</p>
+            </div>
             @foreach ($booked_tours as $booked_tour)
                 <div class="div-tour-details">
                     <p id="payment-desc">*Pending Payment Verification</p>

@@ -167,26 +167,6 @@
         </div>
     </main>
     @include('footer')
-    <script>
-        const inclusions = localStorage.getItem("output_inclusions");
-        const inclusionList = document.getElementById("inclusion-ul");
-        const inclusionInput = document.getElementById("inclusion-input"); // add this line
-
-        if (inclusions) {
-            const inclusionsArray = JSON.parse(inclusions);
-
-            for (let i = 0; i < inclusionsArray.length; i++) {
-                const inclusion = inclusionsArray[i];
-                if (inclusion) {
-                    const li = document.createElement("li");
-                    li.textContent = inclusion;
-                    inclusionList.appendChild(li);
-                    inclusionInput.value += inclusion + ','; // add this line
-                }
-            }
-        }
-        inclusionInput.value = inclusionInput.value.slice(0, -1); // remove the last comma
-    </script>
     <script src="{{ asset('js/book-tour-script.js') }}"></script>
     <script src="{{ asset('js/flexible.js') }}"></script>
 </body>

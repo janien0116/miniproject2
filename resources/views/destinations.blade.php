@@ -213,14 +213,6 @@
     @include('footer')
     <script>
         var booktourUrl = "{{ route('book_tour') }}";
-        const currentPage = document.querySelector('body').id;
-        const navLinks = document.querySelectorAll('nav li a');
-
-        navLinks.forEach(link => {
-            if (link.dataset.target === currentPage) {
-                link.classList.add('active');
-            }
-        });
     </script>
     <script src="{{ asset('js/destinations-script.js') }}"></script>
     <script src="{{ asset('js/flexible.js') }}"></script>
