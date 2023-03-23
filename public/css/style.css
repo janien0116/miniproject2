@@ -203,6 +203,7 @@ nav li:hover::after{
     height: 500px;
     position: relative;
     margin: 20px;
+    flex: 1;
 }
 .carousel{
     display: flex;
@@ -265,12 +266,6 @@ nav li:hover::after{
 .right-arrow {
     left: 100%;
     z-index: 3;
-}
-#card1, #card3{
-    flex: 1;
-}
-#card2, #card4{
-    flex: 1;
 }
 .card:hover .carousel-arrow{
     display: flex;
