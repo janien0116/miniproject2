@@ -320,9 +320,8 @@
                         </div>
                         <button class="btn-book-tour">Book This Tour</button>
                     </div>
-
                     {{-- boracay 44444444444444444444444444444444444444444444444444444444444444 --}}
-                    <div class="card" id="card4">
+                    <div class="card" id="card8">
                         <h3 class="dest-value" data-destination="boracay">Boracay</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
@@ -361,8 +360,8 @@
                 </div>
                 {{-- bohol555555555555555 --}}
                 <div class="by-two">
-                    <div class="card" id="card4">
-                        <h3 class="dest-value">Bohol</h3>
+                    <div class="card" id="card9">
+                        <h3 class="dest-value" data-destination="bohol">Bohol</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -397,8 +396,8 @@
                         <button class="btn-book-tour">Book This Tour</button>
                     </div>
                     {{-- baler --}}
-                    <div class="card" id="card4">
-                        <h3 class="dest-value">Baler</h3>
+                    <div class="card" id="card10">
+                        <h3 class="dest-value" data-destination="baler">Baler</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -434,11 +433,10 @@
                         <button class="btn-book-tour">Book This Tour</button>
                     </div>
                 </div>
-
                 {{-- bolinao   555555555555555 --}}
                 <div class="by-two">
-                    <div class="card" id="card4">
-                        <h3 class="dest-value">Bolinao</h3>
+                    <div class="card" id="card11">
+                        <h3 class="dest-value" data-destination="bolinao">Bolinao</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -473,8 +471,8 @@
                         <button class="btn-book-tour">Book This Tour</button>
                     </div>
                     {{-- batanes --}}
-                    <div class="card" id="card4">
-                        <h3 class="dest-value">Batanes</h3>
+                    <div class="card" id="card12">
+                        <h3 class="dest-value" data-destination="batanes">Batanes</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -510,11 +508,10 @@
                         <button class="btn-book-tour">Book This Tour</button>
                     </div>
                 </div>
-
                 {{-- burias   555555555555555 --}}
                 <div class="by-two">
-                    <div class="card" id="card4">
-                        <h3 class="dest-value">Burias</h3>
+                    <div class="card" id="card13">
+                        <h3 class="dest-value" data-destination="burias">Burias</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -549,8 +546,8 @@
                         <button class="btn-book-tour">Book This Tour</button>
                     </div>
                     {{-- caramoan --}}
-                    <div class="card" id="card4">
-                        <h3 class="dest-value">Caramoan</h3>
+                    <div class="card" id="card14">
+                        <h3 class="dest-value" data-destination="caramoan">Caramoan</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -559,7 +556,6 @@
                                 <img src="images/caramoan2.jpg" class="carousel-item">
                                 <img src="images/caramoan3.jpg" class="carousel-item">
                                 <img src="images/caramoan4.jpg" class="carousel-item">
-
                             </div>
                             <div class="carousel-arrow" id="right-arrow"><i class="fa-solid fa-chevron-right"></i>
                             </div>
@@ -587,10 +583,9 @@
                     </div>
                 </div>
                 {{-- maniwaya --}}
-
                 <div class="by-two">
-                    <div class="card" id="card4">
-                        <h3 class="dest-value">Maniwaya</h3>
+                    <div class="card" id="card15">
+                        <h3 class="dest-value" data-destination="maniwaya">Maniwaya</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -626,8 +621,8 @@
                         <button class="btn-book-tour">Book This Tour</button>
                     </div>
                     {{-- intramuros --}}
-                    <div class="card" id="card4">
-                        <h3 class="dest-value">Intramuros</h3>
+                    <div class="card" id="card16">
+                        <h3 class="dest-value" data-destination="intramuros">Intramuros</h3>
                         <div class="carousel">
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
@@ -663,12 +658,6 @@
                         <button class="btn-book-tour">Book This Tour</button>
                     </div>
                 </div>
-                {{--  --}}
-
-
-
-
-                {{-- end  --}}
             </div>
         </main>
     </div>
