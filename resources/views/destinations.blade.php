@@ -210,7 +210,7 @@
                         {{-- palawan   11111111111111111111111111111111111111111111111111 --}}
                         <div class="by-two">    
                         <div class="card" id="card4">
-                            <h3 class="dest-value">Palawan</h3>
+                            <h3 class="dest-value" data-destination="palawan">Palawan</h3>
                             <div class="carousel">
                                 <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                                 </div>
@@ -246,7 +246,7 @@
                         </div>
                         {{-- siargao   22222222222222222222222222222222222222222222222222222 --}}
                         <div class="card" id="card4">
-                            <h3 class="dest-value">Siargao</h3>
+                            <h3 class="dest-value" data-destination="siargao">Siargao</h3>
                             <div class="carousel">
                                 <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                                 </div>
@@ -285,7 +285,7 @@
                             {{-- bagiuo 333333333333333333333333333333333333333333333333333333 --}}
                             <div class="by-two"> 
                             <div class="card" id="card4">
-                                <h3 class="dest-value">Baguio</h3>
+                                <h3 class="dest-value" data-destination="baguio">Baguio</h3>
                                 <div class="carousel">
                                     <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                                     </div>
@@ -323,7 +323,7 @@
                             
                             {{-- boracay 44444444444444444444444444444444444444444444444444444444444444 --}}
                             <div class="card" id="card4">
-                                <h3 class="dest-value">Boracay</h3>
+                                <h3 class="dest-value" data-destination="boracay">Boracay</h3>
                                 <div class="carousel">
                                     <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                                     </div>
