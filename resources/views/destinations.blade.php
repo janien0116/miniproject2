@@ -206,7 +206,9 @@
                             </div>
                             <button class="btn-book-tour">Book This Tour</button>
                         </div>
+                    </div>
                         {{-- palawan   11111111111111111111111111111111111111111111111111 --}}
+                        <div class="by-two">    
                         <div class="card" id="card4">
                             <h3 class="dest-value">Palawan</h3>
                             <div class="carousel">
@@ -279,8 +281,9 @@
                             </div>
                             <button class="btn-book-tour">Book This Tour</button>
                         </div>
+                        </div>
                             {{-- bagiuo 333333333333333333333333333333333333333333333333333333 --}}
-
+                            <div class="by-two"> 
                             <div class="card" id="card4">
                                 <h3 class="dest-value">Baguio</h3>
                                 <div class="carousel">
