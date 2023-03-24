@@ -39,7 +39,7 @@
     }
     nav ul:not(#view-tour, #edit-tour){
         padding: 0;
-        width: max-content;
+        width: 100%;
     }
     #li-div{
         display: none;
