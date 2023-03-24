@@ -226,7 +226,7 @@ nav li:hover::after{
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out; 
 }
 .btn-book-tour{
     /* top: 100%; */

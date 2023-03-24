@@ -15,7 +15,7 @@ function searchForTour() {
     LABEL_ERROR.textContent = "Sorry, we don't have that tour yet. Try searching for others.";
   }
 }
-BTN_SEARCH.addEventListener("click", function(e){
+BTN_SEARCH.addEventListener("click", function (e) {
   e.preventDefault();
   searchForTour();
 });
@@ -43,10 +43,15 @@ function updateCarousel(i, direction) {
     currentIndex = 0;
   }
   images.forEach((image, index) => {
-    image.style.display = (index === currentIndex) ? 'block' : 'none';
+    if (index === currentIndex){
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
+    }
   });
 }
 
+let interval;
 for (let i = 0; i < PREVIOUS.length; i++) {
   PREVIOUS[i].addEventListener('click', function (event) {
     event.preventDefault();
@@ -59,7 +64,6 @@ for (let i = 0; i < PREVIOUS.length; i++) {
     INCLUSIONS[i].style.transform = "scaleX(1)";
   });
 }
-
 for (let i = 0; i < NEXT.length; i++) {
   NEXT[i].addEventListener('click', function (event) {
     event.preventDefault();
@@ -70,6 +74,16 @@ for (let i = 0; i < NEXT.length; i++) {
   });
   CARD[i].addEventListener('mouseenter', function () {
     INCLUSIONS[i].style.transform = "scaleX(1)";
+  });
+}
+for (let i = 0; i < CARD.length; i++) {
+  CARD[i].addEventListener('mouseenter', function () {
+    interval = setInterval(() => {
+      updateCarousel(i, 1);
+    }, 2000);
+    CARD[i].addEventListener('mouseleave', function () {
+      clearInterval(interval);
+    });
   });
 }
 
