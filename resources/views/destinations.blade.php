@@ -316,8 +316,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">6299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">5499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">5299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">4499.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
@@ -503,8 +503,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">5299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">4499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">7299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">5299.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
@@ -577,7 +577,7 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">5499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">5299.00</label></p>
                                 <p><label>2D1N: &#8369;</label><label class="price2d">4499.00</label></p>
                             </div>
                         </div>
@@ -653,8 +653,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">2299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">1499.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>

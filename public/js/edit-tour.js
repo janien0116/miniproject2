@@ -20,22 +20,58 @@ function priceRecall() {
     if (RADIO_2D.checked) {
         if (place == 'Ilocos') {
             baseAmount = 2499.00;
-        } else if (place == 'La Union') {
+        } else if (place == 'La Union' || place == 'Baler') {
             baseAmount = 2699.00;
         } else if (place == 'Sagada') {
             baseAmount = 2799.00;
         } else if (place == 'Puerto Galera') {
             baseAmount = 3499.00;
+        } else if (place == 'Palawan') {
+            baseAmount = 8499.00;
+        } else if (place == 'Siargao') {
+            baseAmount = 5899.00;
+        } else if (place == 'Baguio' || place == 'Bohol' || place == 'Caramoan') {
+            baseAmount = 4499.00;
+        } else if (place == 'Boracay') {
+            baseAmount = 9499.00;
+        } else if (place == 'Batanes') {
+            baseAmount = 5299.00;
+        } else if (place == 'Bolinao') {
+            baseAmount = 2899.00;
+        } else if (place == 'Burias') {
+            baseAmount = 3899.00;
+        } else if (place == 'Maniwaya') {
+            baseAmount = 2999.00;
+        } else if (place == 'Intramuros') {
+            baseAmount = 1499.00;
         }
     } else if (RADIO_3D.checked) {
         if (place == 'Ilocos') {
             baseAmount = 3299.00;
-        } else if (place == 'La Union') {
+        } else if (place == 'La Union' || place == 'Baler') {
             baseAmount = 3699.00;
         } else if (place == 'Sagada') {
             baseAmount = 3799.00;
         } else if (place == 'Puerto Galera') {
             baseAmount = 4499.00;
+        } else if (place == 'Palawan') {
+            baseAmount = 10299.00;
+        } else if (place == 'Siargao') {
+            baseAmount = 7899.00;
+        } else if (place == 'Baguio' || place == 'Bohol' || place == 'Caramoan') {
+            baseAmount = 5299.00;
+        } else if (place == 'Boracay') {
+            baseAmount = 12299.00;
+        } else if (place == 'Batanes') {
+            baseAmount = 7299.00;
+        } else if (place == 'Bolinao') {
+            baseAmount = 3899.00;
+        } else if (place == 'Burias') {
+            baseAmount = 4899.00;
+        } else if (place == 'Maniwaya') {
+            baseAmount = 3999.00;
+        } else if (place == 'Intramuros') {
+            baseAmount = 2299.00;
         }
     }
     tourAmount = baseAmount * seatCount;
