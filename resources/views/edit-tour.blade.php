@@ -96,8 +96,8 @@
                     </div>
                     <div class="form-group" id="avail-seats">
                         <label>No. of Seats:</label>
-                        <input type="number" id="edit-seat-count" name="BookedSeats" min="1" max="12"
-                            value="{{ $booked_tour->BookedSeats }}" required>
+                        <input type="number" id="edit-seat-count" name="BookedSeats" min="1" max="12" required>
+                        <input type="hidden" name="BookedSeats" id="db-seats" value="{{ $booked_tour->BookedSeats }}">
                     </div>
                     <div class="form-group">
                         <label>Choose Pick-Up Location</label>
