@@ -627,10 +627,10 @@
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
-                                <img src="images/caramoan.jpg" class="carousel-item">
-                                <img src="images/caramoan2.jpg" class="carousel-item">
-                                <img src="images/caramoan3.jpg" class="carousel-item">
-                                <img src="images/caramoan4.jpg" class="carousel-item">
+                                <img src="images/intramuros1.jpg" class="carousel-item">
+                                <img src="images/intramuros2.jpg" class="carousel-item">
+                                <img src="images/intramuros3.jpg" class="carousel-item">
+                                <img src="images/intramuros4.jpg" class="carousel-item">
 
                             </div>
                             <div class="carousel-arrow" id="right-arrow"><i class="fa-solid fa-chevron-right"></i>
