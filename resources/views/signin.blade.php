@@ -22,7 +22,7 @@
                   <img src="images/logo1.png" id="logo" width="200px">
                 </a>
               </div>
-              <li id="user-li">
+              <li class="user-li">
                 <label class="stored-user" name="name">{{ session('name') }}</label>
               </li>
               <div id="li-div">

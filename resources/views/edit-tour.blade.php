@@ -16,10 +16,10 @@
 <body>
     <header id="other-page-header">
         <nav>
-            <ul>
+            <ul id="edit-tour">
                 <input type="checkbox" id="menu-toggler" />
                 <label id="toggler-label" for="menu-toggler"><i class="fa-solid fa-bars"></i></label>
-                <li id="user-li">
+                <li class="user-li" id="user-editour">
                     <label class="stored-user" name="name">{{ session('name') }}</label>
                 </li>
                 <div id="li-div">
