@@ -669,6 +669,19 @@ input[type=number]::-webkit-inner-spin-button {
 .button-group form a:hover{
     color: #EED590;
 }
+.paginate{
+    margin: 20px 0;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    background-color: #EED590;
+}
+.paginate a{
+    color: #223656;
+}
+.paginate a:hover{
+    color: #F08C4A;
+}
 
 /* Edit Tour Page */
 .editour-img-b1{

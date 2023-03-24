@@ -53,7 +53,7 @@
             <div class="search-tour">
                 <label for="search">Search</label>
                 <input name="search" type="text" id="search" placeholder="Search destinations" autofocus>
-                <button><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
+                <button id="btn-search"><i class="fa-solid fa-magnifying-glass fa-lg"></i></button>
             </div>
             <div id="error-display">
                 <label id="search-error"></label>

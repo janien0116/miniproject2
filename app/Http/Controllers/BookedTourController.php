@@ -11,7 +11,7 @@ class BookedTourController extends Controller
     public function index()
     {
         $name = session('name');
-        $data = BookedTour::where('name', '=', $name)->get();
+        $data = BookedTour::where('name', '=', $name)->simplePaginate(2);
         return view('tour-history', ['booked_tours' => $data]);
     }
 
@@ -23,7 +23,6 @@ class BookedTourController extends Controller
         $bookedTour->BookedSeats = $request->input('BookedSeats');
         $bookedTour->PickupPoint = $request->input('PickupPoint');
         $bookedTour->PickupTime = $request->input('PickupTime');
-        // $bookedTour->Inclusions = json_encode($request->input('Inclusions'));
         $bookedTour->Inclusions = $request->input('Inclusions');
         $bookedTour->Price = $request->input('Price');
         $bookedTour->BookedBy = $request->input('BookedBy');

@@ -109,6 +109,9 @@
                     </div>
                 </div>
             @endforeach
+            <div class="paginate">
+                {{ $booked_tours->links() }}
+            </div>
         </div>
     </main>
     @include('footer')

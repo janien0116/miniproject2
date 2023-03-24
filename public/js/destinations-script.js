@@ -2,18 +2,26 @@
 const SEARCH_INPUT = document.getElementById("search");
 const CARDS = document.querySelectorAll(".card");
 const LABEL_ERROR = document.querySelector("#search-error");
+const BTN_SEARCH = document.querySelector('#btn-search');
 
+function searchForTour() {
+  const DEST_VALUE = SEARCH_INPUT.value.toLowerCase();
+  const MATCHING_CARD = Array.from(CARDS).find(function (card) {
+    return card.querySelector('.dest-value').getAttribute("data-destination").toLowerCase() === DEST_VALUE;
+  });
+  if (MATCHING_CARD) {
+    MATCHING_CARD.scrollIntoView({ behavior: "smooth" });
+  } else {
+    LABEL_ERROR.textContent = "Sorry, we don't have that tour yet. Try searching for others.";
+  }
+}
+BTN_SEARCH.addEventListener("click", function(e){
+  e.preventDefault();
+  searchForTour();
+});
 SEARCH_INPUT.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
-    const DEST_VALUE = this.value.toLowerCase();
-    const MATCHING_CARD = Array.from(CARDS).find(function (card) {
-      return card.querySelector('.dest-value').getAttribute("data-destination").toLowerCase() === DEST_VALUE;
-    });
-    if (MATCHING_CARD) {
-      MATCHING_CARD.scrollIntoView({ behavior: "smooth" });
-    } else {
-      LABEL_ERROR.textContent = "Sorry, we don't have that tour yet. Try searching for others.";
-    }
+    searchForTour();
   }
 });
 

@@ -159,7 +159,7 @@
                     </div>
                     <input type="hidden" name="username" id="username" value="{{ session('name') }}">
                     <div class="div-btn-book">
-                        <button id="btn-addtour">Proceed to Payment</button>
+                        <button id="btn-addtour" type="submit">Proceed to Payment</button>
                     </div>
                 </div>
             </form>

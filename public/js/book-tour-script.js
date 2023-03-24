@@ -108,3 +108,20 @@ if (INCLUSIONS) {
     }
 }
 INCLUSION_INPUT.value = INCLUSION_INPUT.value.slice(0, -1);
+
+
+const BTN_BOOK = document.querySelector('#btn-addtour');
+const NAME = document.querySelector('#book-by');
+
+SEAT_COUNT.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        BTN_BOOK.click();
+    }
+});
+NAME.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        BTN_BOOK.click();
+    }
+});
