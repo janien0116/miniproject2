@@ -207,7 +207,7 @@
                             <button class="btn-book-tour">Book This Tour</button>
                         </div>
                     </div>
-                        {{-- palawan   11111111111111111111111111111111111111111111111111 --}}
+                        {{-- palawan  --}}
                         <div class="by-two">    
                         <div class="card" id="card4">
                             <h3 class="dest-value">Palawan</h3>
@@ -244,7 +244,7 @@
                             </div>
                             <button class="btn-book-tour">Book This Tour</button>
                         </div>
-                        {{-- siargao   22222222222222222222222222222222222222222222222222222 --}}
+                        {{-- siargao  --}}
                         <div class="card" id="card4">
                             <h3 class="dest-value">Siargao</h3>
                             <div class="carousel">
@@ -282,7 +282,7 @@
                             <button class="btn-book-tour">Book This Tour</button>
                         </div>
                         </div>
-                            {{-- bagiuo 333333333333333333333333333333333333333333333333333333 --}}
+                            {{-- bagiuo  --}}
                           <div class="by-two"> 
                             <div class="card" id="card4">
                                 <h3 class="dest-value">Baguio</h3>
@@ -321,7 +321,7 @@
                                 <button class="btn-book-tour">Book This Tour</button>
                             </div>
                             
-                            {{-- boracay 44444444444444444444444444444444444444444444444444444444444444 --}}
+                            {{-- boracay  --}}
                             <div class="card" id="card4">
                                 <h3 class="dest-value">Boracay</h3>
                                 <div class="carousel">
@@ -359,7 +359,7 @@
                                 <button class="btn-book-tour">Book This Tour</button>
                             </div>
                     </div>
-                        {{-- bohol555555555555555 --}}
+                        {{-- bohol --}}
                         <div class="by-two">    
                             <div class="card" id="card4">
                                 <h3 class="dest-value">Bohol</h3>
@@ -435,7 +435,7 @@
                             </div>
                             </div>
                                                       
-                              {{-- bolinao   555555555555555 --}}
+                              {{-- bolinao   --}}
                         <div class="by-two">    
                             <div class="card" id="card4">
                                 <h3 class="dest-value">Bolinao</h3>
@@ -511,7 +511,7 @@
                             </div>
                             </div>
                             
-                      {{-- burias   555555555555555 --}}
+                      {{-- burias --}}
                       <div class="by-two">    
                         <div class="card" id="card4">
                             <h3 class="dest-value">Burias</h3>
