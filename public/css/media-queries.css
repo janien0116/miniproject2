@@ -37,7 +37,7 @@
     h3, .search-tour label{
         font-size: 1.3em;
     }
-    nav ul{
+    nav ul:not(#view-tour, #edit-tour){
         padding: 0;
         width: max-content;
     }
@@ -50,7 +50,7 @@
         top: 65px;
         background-color: rgba(22, 36, 56, 0.8);
     }
-    nav #user-li{
+    nav .user-li:not(#user-viewtour, #user-editour){
         display: block;
         position: absolute;
         top: 10px;

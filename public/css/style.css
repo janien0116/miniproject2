@@ -71,7 +71,7 @@ nav li{
     list-style: none;
     white-space: nowrap;
 }
-nav #user-li{
+nav .user-li{
     cursor: none;
 }
 nav li::after {
@@ -86,7 +86,7 @@ nav li::after {
     content: "";
     transition: all 0.2s;
 }
-#user-li::after{
+.user-li::after{
     display: none;
 }
 nav li:hover::after{
