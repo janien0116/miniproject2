@@ -15,6 +15,8 @@ divTourDetails.forEach((tourDetail, index) => {
         destinationImg[index].src = '../images/la-union.jpg';
     } else if (destinationText === 'Baler') {
         destinationImg[index].src = '../images/baler.jpg';
+      } else if (destinationText === 'Intramuros') {
+        destinationImg[index].src = '../images/intramuros1.jpg';
     } else {
       destinationImg[index].src = 'images/destination-placeholder.png';
     }

@@ -23,7 +23,8 @@ class BookedTourController extends Controller
         $bookedTour->BookedSeats = $request->input('BookedSeats');
         $bookedTour->PickupPoint = $request->input('PickupPoint');
         $bookedTour->PickupTime = $request->input('PickupTime');
-        $bookedTour->Inclusions = json_encode($request->input('Inclusions'));
+        // $bookedTour->Inclusions = json_encode($request->input('Inclusions'));
+        $bookedTour->Inclusions = $request->input('Inclusions');
         $bookedTour->Price = $request->input('Price');
         $bookedTour->BookedBy = $request->input('BookedBy');
         $bookedTour->name = $request->input('username');

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('BookedSeats');
             $table->string('PickupPoint');
             $table->string('PickupTime');
-            $table->json('Inclusions');
+            $table->text('Inclusions');
             $table->string('Price');
             $table->string('BookedBy');
             $table->string('ReferenceNo', 10)->unique();

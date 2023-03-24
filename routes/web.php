@@ -35,11 +35,11 @@ Route::get('/login', function () {
 
 Route::get('/destinations', function () {
     return view('destinations');
-})->middleware(['auth'])->name('tour_places');
+})->name('tour_places');
 
 Route::get('/booktour', function () {
     return view('book-tour');
-})->name('book_tour');
+})->middleware(['auth'])->name('book_tour');
 
 Route::get('/tours', [BookedTourController::class, 'index'])->middleware(['auth'])->name('tour_history');
 
