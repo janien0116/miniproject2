@@ -1,3 +1,4 @@
+//Setting Destination Image
 let destinationImg = document.querySelectorAll('.tour-placeholder');
 let destination = document.querySelectorAll('.destination-output');
 let divTourDetails = document.querySelectorAll('.div-tour-details');

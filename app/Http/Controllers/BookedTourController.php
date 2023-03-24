@@ -11,7 +11,7 @@ class BookedTourController extends Controller
     public function index()
     {
         $name = session('name');
-        $data = BookedTour::where('name', '=', $name)->simplePaginate(2);
+        $data = BookedTour::where('name', '=', $name)->simplePaginate(3);
         return view('tour-history', ['booked_tours' => $data]);
     }
 

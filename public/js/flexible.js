@@ -1,3 +1,4 @@
+// Collapse nav
 const MEDIA_QUERY = window.matchMedia("(min-width: 701px)");
 const MENU_TOGGLER = document.querySelector('#menu-toggler');
 const LI_DIV = document.querySelector('#li-div');
@@ -16,6 +17,8 @@ window.onresize = function() {
         LI_DIV.style.display = "none";
     }
 }
+
+//Highlight active page menu
 const CURRENT_PAGE = document.querySelector('body').id;
 const NAV_LINKS = document.querySelectorAll('nav li a');
 
