@@ -133,6 +133,7 @@
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
                     </div>
                 </div>
+                {{-- sagada --}}
                 <div class="by-two">
                     <div class="card" id="card3">
                         <!-- <form action="pass_value.php" method="post"> -->
@@ -171,6 +172,7 @@
                         <button type="submit" class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
                         <!-- </form> -->
                     </div>
+                    {{-- ilocos --}}
                     <div class="card" id="card4">
                         <h3 class="dest-value" data-destination="ilocos">Ilocos</h3>
                         <div class="carousel">
@@ -207,7 +209,7 @@
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
                     </div>
                 </div>
-                {{-- palawan   11111111111111111111111111111111111111111111111111 --}}
+                {{-- palawan  --}}
                 <div class="by-two">
                     <div class="card" id="card5">
                         <h3 class="dest-value" data-destination="palawan">Palawan</h3>
@@ -238,13 +240,13 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">10299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">8499.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
                     </div>
-                    {{-- siargao   22222222222222222222222222222222222222222222222222222 --}}
+                    {{-- siargao --}}
                     <div class="card" id="card6">
                         <h3 class="dest-value" data-destination="siargao">Siargao</h3>
                         <div class="carousel">
@@ -275,14 +277,14 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">7899.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">5899.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
                     </div>
                 </div>
-                {{-- bagiuo 333333333333333333333333333333333333333333333333333333 --}}
+                {{-- bagiuo --}}
                 <div class="by-two">
                     <div class="card" id="card7">
                         <h3 class="dest-value" data-destination="baguio">Baguio</h3>
@@ -314,13 +316,13 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">5299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">4499.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
                     </div>
-                    {{-- boracay 44444444444444444444444444444444444444444444444444444444444444 --}}
+                    {{-- boracay --}}
                     <div class="card" id="card8">
                         <h3 class="dest-value" data-destination="boracay">Boracay</h3>
                         <div class="carousel">
@@ -351,14 +353,14 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">12299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">9499.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
                     </div>
                 </div>
-                {{-- bohol555555555555555 --}}
+                {{-- bohol--}}
                 <div class="by-two">
                     <div class="card" id="card9">
                         <h3 class="dest-value" data-destination="bohol">Bohol</h3>
@@ -389,8 +391,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">5299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">4499.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
@@ -426,8 +428,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">3699.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">2699.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
@@ -464,8 +466,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">3899.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">2899.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
@@ -501,8 +503,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">7299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">5299.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
@@ -539,8 +541,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">4899.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">3899.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
@@ -575,8 +577,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">5299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">4499.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
@@ -614,7 +616,7 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">3999.00</label></p>
                                 <p><label>2D1N: &#8369;</label><label class="price2d">2999.00</label></p>
                             </div>
                         </div>
@@ -651,8 +653,8 @@
                                     <li>Gas, Toll & Parking Fees</li>
                                 </ul>
                                 <br>
-                                <p><label>3D2N: &#8369;</label><label class="price3d">3299.00</label></p>
-                                <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
+                                <p><label>3D2N: &#8369;</label><label class="price3d">2299.00</label></p>
+                                <p><label>2D1N: &#8369;</label><label class="price2d">1499.00</label></p>
                             </div>
                         </div>
                         <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>

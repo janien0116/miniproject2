@@ -40,4 +40,3 @@ divTourDetails.forEach((tourDetail, index) => {
     }
   });
 
-  
