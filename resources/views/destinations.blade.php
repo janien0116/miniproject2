@@ -227,9 +227,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">6/16/2023</label>,
+                                    <label class="second-date">6/21/2023</label>,
+                                    <label class="third-date">6/26/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -264,9 +264,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">6/29/2023</label>,
+                                    <label class="second-date">7/5/2023</label>,
+                                    <label class="third-date">7/8/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -303,9 +303,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">7/10/2023</label>,
+                                    <label class="second-date">7/14/2023</label>,
+                                    <label class="third-date">7/19/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -340,9 +340,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">8/15/2023</label>,
+                                    <label class="second-date">8/21/2023</label>,
+                                    <label class="third-date">8/27/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -378,9 +378,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">8/1/2023</label>,
+                                    <label class="second-date">8/24/2023</label>,
+                                    <label class="third-date">8/31/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -415,9 +415,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">9/6/2023</label>,
+                                    <label class="second-date">9/11/2023</label>,
+                                    <label class="third-date">9/16/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -453,9 +453,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">10/3/2023</label>,
+                                    <label class="second-date">10/12/2023</label>,
+                                    <label class="third-date">10/17/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -490,9 +490,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">10/16/2023</label>,
+                                    <label class="second-date">10/22/2023</label>,
+                                    <label class="third-date">10/28/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -528,9 +528,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">10/31/2023</label>,
+                                    <label class="second-date">11/4/2023</label>,
+                                    <label class="third-date">11/15/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -564,9 +564,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">11/13/2023</label>,
+                                    <label class="second-date">11/20/2023</label>,
+                                    <label class="third-date">11/26/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -602,9 +602,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">11/29/2023</label>,
+                                    <label class="second-date">12/1/2023</label>,
+                                    <label class="third-date">12/7/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
@@ -640,9 +640,9 @@
                             <div class="inclusions">
                                 <p>3D2N / 2D1N</p>
                                 <p>Tour Dates:
-                                    <label class="first-date">4/16/2023</label>,
-                                    <label class="second-date">4/21/2023</label>,
-                                    <label class="third-date">4/26/2023</label>
+                                    <label class="first-date">12/16/2023</label>,
+                                    <label class="second-date">12/18/2023</label>,
+                                    <label class="third-date">12/27/2023</label>
                                 </p>
                                 <ul class="include">
                                     <li>RT Premium Van Transfers</li>
