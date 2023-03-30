@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media-queries.css') }}">
     <script src="https://kit.fontawesome.com/5f8be564ce.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body id="destinations">
@@ -62,8 +63,12 @@
                 <div class="by-two">
                     <div class="card" id="card1">
                         <!-- <form action="pass_value.php" method="post"> -->
-                        <h3 class="dest-value" data-destination="la union">La Union</h3>
+                        <h3 class="dest-value" data-destination="la union">La Union
+                            <a id="map-marker"><i class="fa-solid fa-location-dot" style="color: #f50000;"></i></a>
+                            <a id="map-close"><i class="fa-solid fa-circle-xmark" style="color: #ff4000;"></i></a>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -94,7 +99,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">2699.00</label></p>
                             </div>
                         </div>
-                        <button type="submit" class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button type="submit" class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This
+                            Tour</button>
                         <!-- </form> -->
                     </div>
                     <div class="card" id="card2">
@@ -130,7 +137,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">3499.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This
+                            Tour</button>
                     </div>
                 </div>
                 {{-- sagada --}}
@@ -169,7 +178,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">2799.00</label></p>
                             </div>
                         </div>
-                        <button type="submit" class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button type="submit" class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This
+                            Tour</button>
                         <!-- </form> -->
                     </div>
                     {{-- ilocos --}}
@@ -206,7 +217,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">2499.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                 </div>
                 {{-- palawan  --}}
@@ -244,7 +257,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">8499.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                     {{-- siargao --}}
                     <div class="card" id="card6">
@@ -281,7 +296,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">5899.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                 </div>
                 {{-- bagiuo --}}
@@ -292,11 +309,11 @@
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
-                                <img src="images/baguio.jpg" class="carousel-item">
+                                <img src="images/baguio4.jpg" class="carousel-item">
                                 <img src="images/baguio2.jpg" class="carousel-item">
                                 <img src="images/baguio3.jpg" class="carousel-item">
                                 <img src="images/baguio4.jpg" class="carousel-item">
-                                <img src="images/baguio5.jpg" class="carousel-item">
+                                <img src="images/baguio.jpg" class="carousel-item">
                             </div>
                             <div class="carousel-arrow" id="right-arrow"><i class="fa-solid fa-chevron-right"></i>
                             </div>
@@ -320,7 +337,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">4499.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                     {{-- boracay --}}
                     <div class="card" id="card8">
@@ -357,10 +376,12 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">9499.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                 </div>
-                {{-- bohol--}}
+                {{-- bohol --}}
                 <div class="by-two">
                     <div class="card" id="card9">
                         <h3 class="dest-value" data-destination="bohol">Bohol</h3>
@@ -395,7 +416,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">4499.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                     {{-- baler --}}
                     <div class="card" id="card10">
@@ -432,7 +455,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">2699.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                 </div>
                 {{-- bolinao   555555555555555 --}}
@@ -470,7 +495,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">2899.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                     {{-- batanes --}}
                     <div class="card" id="card12">
@@ -507,7 +534,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">5299.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                 </div>
                 {{-- burias   555555555555555 --}}
@@ -545,7 +574,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">3899.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                     {{-- caramoan --}}
                     <div class="card" id="card14">
@@ -581,7 +612,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">4499.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                 </div>
                 {{-- maniwaya --}}
@@ -620,7 +653,9 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">2999.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                     {{-- intramuros --}}
                     <div class="card" id="card16">
@@ -657,13 +692,18 @@
                                 <p><label>2D1N: &#8369;</label><label class="price2d">1499.00</label></p>
                             </div>
                         </div>
-                        <button class="btn-book-tour" onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book This Tour</button>
+                        <button class="btn-book-tour"
+                            onclick="event.preventDefault(); window.location.href='{{ route('book_tour') }}'">Book
+                            This Tour</button>
                     </div>
                 </div>
             </div>
         </main>
     </div>
     @include('footer')
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoaANOkJ9LAa78Rg83rOexloz5z3lOhBQ&callback=initialize&v=weekly"
+        defer></script>
     <script>
         var booktourUrl = "{{ route('book_tour') }}";
     </script>
