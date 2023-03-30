@@ -125,7 +125,7 @@ function initialize() {
   panorama = new google.maps.StreetViewPanorama(
     VIEW,
     {
-      // position: { lat: 16.6580, lng: 120.3209 }, La Union
+      position: { lat: 16.6580, lng: 120.3209 },
       // position: { lat: 13.5026, lng: 120.9530 }, Puerto Galera
       // position: { lat: 17.0707, lng: 120.9253 }, Sagada
       // position: { lat: 17.5699, lng: 120.3883 }, Ilocos
@@ -140,7 +140,7 @@ function initialize() {
       // position: { lat: 13.221425896146819, lng: 123.0452887377933 }, Burias
       // position: { lat: 13.809783342129379, lng: 123.89607076421105 }, Caramoan
       // position: { lat: 13.530403326195996, lng: 122.12067227354945 }, Maniwaya
-      position: { lat: 14.589961851976145, lng: 120.97350069648266 }, // Intramuros
+      // position: { lat: 14.589961851976145, lng: 120.97350069648266 },  Intramuros
       pov: { heading: 165, pitch: 0 },
       zoom: 1,
     }
