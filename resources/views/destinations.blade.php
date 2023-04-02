@@ -64,11 +64,11 @@
                     <div class="card" id="card1">
                         <!-- <form action="pass_value.php" method="post"> -->
                         <h3 class="dest-value" data-destination="la union">La Union
-                            <a id="map-marker"><i class="fa-solid fa-location-dot" style="color: #f50000;"></i></a>
-                            <a id="map-close"><i class="fa-solid fa-circle-xmark" style="color: #ff4000;"></i></a>
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
                         </h3>
                         <div class="carousel">
-                            <div class="pano"></div>
+                            <div class="pano" id="la-union-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -105,8 +105,12 @@
                         <!-- </form> -->
                     </div>
                     <div class="card" id="card2">
-                        <h3 class="dest-value" data-destination="puerto galera">Puerto Galera</h3>
+                        <h3 class="dest-value" data-destination="puerto galera">Puerto Galera
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="puerto-galera-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -146,8 +150,12 @@
                 <div class="by-two">
                     <div class="card" id="card3">
                         <!-- <form action="pass_value.php" method="post"> -->
-                        <h3 class="dest-value" data-destination="sagada">Sagada</h3>
+                        <h3 class="dest-value" data-destination="sagada">Sagada
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="sagada-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -185,8 +193,12 @@
                     </div>
                     {{-- ilocos --}}
                     <div class="card" id="card4">
-                        <h3 class="dest-value" data-destination="ilocos">Ilocos</h3>
+                        <h3 class="dest-value" data-destination="ilocos">Ilocos
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="ilocos-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -225,8 +237,12 @@
                 {{-- palawan  --}}
                 <div class="by-two">
                     <div class="card" id="card5">
-                        <h3 class="dest-value" data-destination="palawan">Palawan</h3>
+                        <h3 class="dest-value" data-destination="palawan">Palawan
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="palawan-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -263,8 +279,12 @@
                     </div>
                     {{-- siargao --}}
                     <div class="card" id="card6">
-                        <h3 class="dest-value" data-destination="siargao">Siargao</h3>
+                        <h3 class="dest-value" data-destination="siargao">Siargao
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="siargao-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -304,8 +324,12 @@
                 {{-- bagiuo --}}
                 <div class="by-two">
                     <div class="card" id="card7">
-                        <h3 class="dest-value" data-destination="baguio">Baguio</h3>
+                        <h3 class="dest-value" data-destination="baguio">Baguio
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="baguio-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -343,8 +367,12 @@
                     </div>
                     {{-- boracay --}}
                     <div class="card" id="card8">
-                        <h3 class="dest-value" data-destination="boracay">Boracay</h3>
+                        <h3 class="dest-value" data-destination="boracay">Boracay
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="boracay-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -384,8 +412,12 @@
                 {{-- bohol --}}
                 <div class="by-two">
                     <div class="card" id="card9">
-                        <h3 class="dest-value" data-destination="bohol">Bohol</h3>
+                        <h3 class="dest-value" data-destination="bohol">Bohol
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="bohol-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -422,8 +454,12 @@
                     </div>
                     {{-- baler --}}
                     <div class="card" id="card10">
-                        <h3 class="dest-value" data-destination="baler">Baler</h3>
+                        <h3 class="dest-value" data-destination="baler">Baler
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="baler-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -463,8 +499,12 @@
                 {{-- bolinao   555555555555555 --}}
                 <div class="by-two">
                     <div class="card" id="card11">
-                        <h3 class="dest-value" data-destination="bolinao">Bolinao</h3>
+                        <h3 class="dest-value" data-destination="bolinao">Bolinao
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="bolinao-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -501,8 +541,12 @@
                     </div>
                     {{-- batanes --}}
                     <div class="card" id="card12">
-                        <h3 class="dest-value" data-destination="batanes">Batanes</h3>
+                        <h3 class="dest-value" data-destination="batanes">Batanes
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="batanes-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -542,8 +586,12 @@
                 {{-- burias   555555555555555 --}}
                 <div class="by-two">
                     <div class="card" id="card13">
-                        <h3 class="dest-value" data-destination="burias">Burias</h3>
+                        <h3 class="dest-value" data-destination="burias">Burias
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="burias-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -580,8 +628,12 @@
                     </div>
                     {{-- caramoan --}}
                     <div class="card" id="card14">
-                        <h3 class="dest-value" data-destination="caramoan">Caramoan</h3>
+                        <h3 class="dest-value" data-destination="caramoan">Caramoan
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="caramoan-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -620,8 +672,12 @@
                 {{-- maniwaya --}}
                 <div class="by-two">
                     <div class="card" id="card15">
-                        <h3 class="dest-value" data-destination="maniwaya">Maniwaya</h3>
+                        <h3 class="dest-value" data-destination="maniwaya">Maniwaya
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="maniwaya-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -659,8 +715,12 @@
                     </div>
                     {{-- intramuros --}}
                     <div class="card" id="card16">
-                        <h3 class="dest-value" data-destination="intramuros">Intramuros</h3>
+                        <h3 class="dest-value" data-destination="intramuros">Intramuros
+                            <button class="toggle-map"><i class="fa-solid fa-location-dot fa-xl" style="color: #f50000;"></i></button>
+                            <button class="close-map"><i class="fa-solid fa-circle-xmark fa-xl" style="color: #ff4000;"></i></button>
+                        </h3>
                         <div class="carousel">
+                            <div class="pano" id="intramuros-view"></div>
                             <div class="carousel-arrow" id="left-arrow"><i class="fa-solid fa-chevron-left"></i>
                             </div>
                             <div class="img-div">
@@ -697,6 +757,9 @@
                             This Tour</button>
                     </div>
                 </div>
+            </div>
+            <div class="to-top">
+                <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
             </div>
         </main>
     </div>

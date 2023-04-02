@@ -907,11 +907,35 @@ footer {
     z-index: 999;
 }
 
-#map-marker{
-    cursor: pointer;
+.toggle-map {
+    font-size: 20px;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
 }
 
-#map-close{
-    cursor: pointer;
+.close-map{
     display: none;
+    font-size: 20px;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 10;
+}
+
+#back-to-top{
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 100%;
+    background-color: rgba(240, 140, 74, 0.8);
+    border: 2px solid #223656;
 }

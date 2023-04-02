@@ -43,7 +43,7 @@ function updateCarousel(i, direction) {
     currentIndex = 0;
   }
   images.forEach((image, index) => {
-    if (index === currentIndex){
+    if (index === currentIndex) {
       image.style.display = 'block';
     } else {
       image.style.display = 'none';
@@ -104,43 +104,168 @@ for (let i = 0; i < BOOK_TOUR.length; i++) {
   });
 }
 
-const MARKER = document.querySelector('.fa-location-dot');
-const CLOSE_ICON = document.querySelector('.fa-circle-xmark');
-const CLOSE = document.querySelector('#map-close');
-const VIEW = document.querySelector(".pano");
+//Script to toggle Google Map
+const MARKER = document.querySelectorAll('.toggle-map');
+const CLOSE = document.querySelectorAll('.close-map');
+const PANO = document.querySelectorAll(".pano");
+
+for (let i = 0; i < MARKER.length; i++) {
+  MARKER[i].addEventListener("click", function () {
+    PANO[i].style.display = "block";
+    MARKER[i].style.display = "none";
+    CLOSE[i].style.display = "inline";
+  });
+}
+for (let j = 0; j < CLOSE.length; j++) {
+  CLOSE[j].addEventListener("click", function () {
+    PANO[j].style.display = "none";
+    MARKER[j].style.display = "inline";
+    CLOSE[j].style.display = "none";
+  });
+}
+
+const LA_UNION = document.querySelector('#la-union-view');
+const PUERTO_GALERA = document.querySelector('#puerto-galera-view');
+const SAGADA = document.querySelector('#sagada-view');
+const ILOCOS = document.querySelector('#ilocos-view');
+const PALAWAN = document.querySelector('#palawan-view');
+const SIARGAO = document.querySelector('#siargao-view');
+const BAGUIO = document.querySelector('#baguio-view');
+const BORACAY = document.querySelector('#boracay-view');
+const BOHOL = document.querySelector('#bohol-view');
+const BALER = document.querySelector('#baler-view');
+const BOLINAO = document.querySelector('#bolinao-view');
+const BATANES = document.querySelector('#batanes-view');
+const BURIAS = document.querySelector('#burias-view');
+const CARAMOAN = document.querySelector('#caramoan-view');
+const MANIWAYA = document.querySelector('#maniwaya-view');
+const INTRAMUROS = document.querySelector('#intramuros-view');
 let panorama;
-
-MARKER.addEventListener("click", function() {
-  VIEW.style.display = "block";
-  MARKER.style.display = "none";
-  CLOSE.style.display = "inline";
-});
-CLOSE_ICON.addEventListener("click", function() {
-  VIEW.style.display = "none";
-  MARKER.style.display = "inline";
-  CLOSE.style.display = "none";
-});
-
 function initialize() {
   panorama = new google.maps.StreetViewPanorama(
-    VIEW,
+    LA_UNION,
     {
       position: { lat: 16.6580, lng: 120.3209 },
-      // position: { lat: 13.5026, lng: 120.9530 }, Puerto Galera
-      // position: { lat: 17.0707, lng: 120.9253 }, Sagada
-      // position: { lat: 17.5699, lng: 120.3883 }, Ilocos
-      // position: { lat: 11.9564, lng: 120.2169 }, Palawan
-      // position: { lat: 9.81370198759517, lng: 126.16512477622939 }, Siargao
-      // position: { lat: 16.36786567744473, lng: 120.60597803923783 }, Baguio
-      // position: { lat: 11.968280950301622, lng: 121.9186258377946 }, Boaracay
-      // position: { lat: 9.829739112889856, lng: 124.13966221049107 }, Bohol
-      // position: { lat: 15.757713560591098, lng: 121.61966471610938 }, Baler
-      // position: { lat: 16.305943378373765, lng: 119.86037497966163 }, Bolinao
-      // position: { lat: 20.426995674941022, lng: 121.94923391164974 }, Batanes
-      // position: { lat: 13.221425896146819, lng: 123.0452887377933 }, Burias
-      // position: { lat: 13.809783342129379, lng: 123.89607076421105 }, Caramoan
-      // position: { lat: 13.530403326195996, lng: 122.12067227354945 }, Maniwaya
-      // position: { lat: 14.589961851976145, lng: 120.97350069648266 },  Intramuros
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    },
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    PUERTO_GALERA,
+    {
+      position: { lat: 13.5026, lng: 120.9530 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    SAGADA,
+    {
+      position: { lat: 17.0707, lng: 120.9253 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    ILOCOS,
+    {
+      position: { lat: 17.5699, lng: 120.3883 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    PALAWAN,
+    {
+      position: { lat: 11.9564, lng: 120.2169 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    SIARGAO,
+    {
+      position: { lat: 9.81370198759517, lng: 126.16512477622939 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    BAGUIO,
+    {
+      position: { lat: 16.36786567744473, lng: 120.60597803923783 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    BORACAY,
+    {
+      position: { lat: 11.968280950301622, lng: 121.9186258377946 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    BOHOL,
+    {
+      position: { lat: 9.829739112889856, lng: 124.13966221049107 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    BALER,
+    {
+      position: { lat: 15.757713560591098, lng: 121.61966471610938 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    BOLINAO,
+    {
+      position: { lat: 16.305943378373765, lng: 119.86037497966163 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    BATANES,
+    {
+      position: { lat: 20.426995674941022, lng: 121.94923391164974 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    BURIAS,
+    {
+      position: { lat: 13.221425896146819, lng: 123.0452887377933 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    CARAMOAN,
+    {
+      position: { lat: 13.809783342129379, lng: 123.89607076421105 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    MANIWAYA,
+    {
+      position: { lat: 13.530403326195996, lng: 122.12067227354945 },
+      pov: { heading: 165, pitch: 0 },
+      zoom: 1,
+    }
+  );
+  panorama = new google.maps.StreetViewPanorama(
+    INTRAMUROS,
+    {
+      position: { lat: 14.589961851976145, lng: 120.97350069648266 },
       pov: { heading: 165, pitch: 0 },
       zoom: 1,
     }
@@ -148,3 +273,9 @@ function initialize() {
 }
 
 window.initialize = initialize;
+
+const SCROLL_TOP = document.querySelector('#back-to-top');
+
+SCROLL_TOP.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
