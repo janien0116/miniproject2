@@ -36,7 +36,7 @@
                     </li>
                     @if (Auth::user())
                         <li>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST"">
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf
                                 <a class="log-out-btn" href="#"
                                     onclick="event.preventDefault();document.getElementById('logout-form').submit();">
@@ -102,7 +102,10 @@
                         <form action="{{ route('delete_tour', $booked_tour) }}" method="POST" id="delete-tour-{{ $booked_tour->id }}">
                             @method('DELETE')
                             @csrf
-                            <a href="{{ route('delete_tour', $booked_tour) }}" onclick="event.preventDefault();document.getElementById('delete-tour-{{ $booked_tour->id }}').submit();">
+                            <a href="{{ route('delete_tour', $booked_tour) }}" onclick="event.preventDefault();
+                            if(confirm('Are you sure to delete this tour?')) {
+                                document.getElementById('delete-tour-{{ $booked_tour->id }}').submit();
+                            }">
                                 Delete This Tour
                             </a>
                         </form>                        
