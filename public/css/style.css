@@ -274,6 +274,7 @@ nav li:hover::after {
     font-size: 18px;
     /* position: absolute; */
     border-color: #223656;
+    margin-top: 15px;
 }
 
 .btn-book-tour:hover {
