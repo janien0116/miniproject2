@@ -1,0 +1,942 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body:not(#home) {
+    background: rgb(67, 217, 192);
+    background: linear-gradient(90deg, rgba(67, 217, 192, 1) 0%, rgba(238, 213, 144, 1) 80%);
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: #EED590;
+}
+
+button,
+input[type="submit"],
+select {
+    cursor: pointer;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #223656;
+    font-size: 30px;
+}
+
+#other-page-header {
+    background-color: rgb(34, 54, 86, 0.8);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#menu-toggler {
+    display: none;
+}
+
+#toggler-label {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    background-color: transparent;
+    color: #43D9C0;
+    border: none;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    display: none;
+    z-index: 5;
+}
+
+.div-logo {
+    flex: 4;
+    cursor: pointer;
+}
+
+#li-div {
+    display: flex;
+    justify-content: space-between;
+    flex: 3;
+    overflow-x: hidden;
+    width: max-content;
+}
+
+nav li {
+    position: relative;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    height: 30px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 1em;
+    text-align: center;
+    list-style: none;
+    white-space: nowrap;
+}
+
+nav .user-li {
+    cursor: none;
+}
+
+nav li::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #43D9C0;
+    width: 0;
+    height: 3px;
+    content: "";
+    transition: all 0.2s;
+}
+
+.user-li::after {
+    display: none;
+}
+
+nav li:hover::after {
+    width: 100%;
+}
+
+/* Index Styles */
+.stored-user {
+    color: #F08C4A;
+}
+
+.active {
+    font-weight: bold;
+    color: #43D9C0;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #223656;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background-position: center center;
+}
+
+.hero-text {
+    position: absolute;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.hero-text h2 {
+    font-family: 'Shantell Sans', cursive;
+    color: #43D9C0;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+.hero-text h2:first-of-type {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.8em;
+    letter-spacing: 0;
+    font-weight: bolder;
+}
+
+#btn-show-tours[type="button"] {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 2px outset #43D9C0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F08C4A;
+    color: #223656;
+    font-size: 1.2em;
+}
+
+#btn-show-tours[type="button"]:hover {
+    background-color: #EED590;
+    color: #f04a4a;
+    transition: all 0.3s ease;
+}
+
+/* Destinations Menu Styles */
+.search-tour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-tour label {
+    font-family: 'Poppins', sans-serif;
+    color: #223656;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.search-tour input {
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #223656;
+    border-radius: 7px;
+    padding: 8px 10px;
+}
+
+.search-tour button {
+    margin-left: 10px;
+    padding: 8px 10px;
+    border: 2px outset #EED590;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.search-tour button:hover {
+    background-color: #223656;
+    color: #EED590;
+}
+
+#error-display {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    color: #f04a4a;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.by-two {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    position: relative;
+    margin: 20px;
+    flex: 1;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img-div {
+    width: 100%;
+    height: 100%;
+    /* position: relative; */
+    overflow: hidden;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.btn-book-tour {
+    /* top: 100%; */
+    padding: 10px 30px;
+    border-radius: 15px;
+    background-color: #223656;
+    color: #EED590;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    /* position: absolute; */
+    border-color: #223656;
+    margin-top: 15px;
+}
+
+.btn-book-tour:hover {
+    color: #f04a4a;
+    background-color: #EED590;
+}
+
+.carousel-arrow {
+    /* position: absolute; */
+    padding: 0 10px;
+    font-size: 36px;
+    color: #EED590;
+    cursor: pointer;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(22, 36, 56, 0.3);
+    border-radius: 10px;
+    display: none;
+}
+
+.left-arrow {
+    right: 100%;
+    border: none;
+    background-color: rgba(22, 36, 56, 0);
+    z-index: 3;
+}
+
+.right-arrow {
+    left: 100%;
+    z-index: 3;
+}
+
+.card:hover .carousel-arrow {
+    display: flex;
+}
+
+.inclusions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    height: 100%;
+    width: 80%;
+    padding-left: 45px;
+    background-color: rgba(22, 36, 56, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #EED590;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.card:hover .inclusions {
+    transform: scaleX(1);
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+.inclusions li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+
+/* Sign In Menu */
+.signin-container {
+    height: 100vh;
+    background-image: url(../images/signin-bg.jpg);
+    background-size: cover;
+}
+
+.signin-container h3 {
+    margin-bottom: 20px;
+}
+
+.joiner-login {
+    height: 60vh;
+    width: max-content;
+    background: rgb(67, 217, 192);
+    background: linear-gradient(90deg, rgba(67, 217, 192, 1) 0%, rgba(238, 213, 144, 1) 80%);
+    margin: 50px;
+    padding: 50px;
+    float: right;
+    border-radius: 10px;
+    position: relative;
+}
+
+.signin-container .form-group {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.signin-container label {
+    font-family: 'Montserrat', sans-serif;
+    color: #223656;
+    font-size: 1.2em;
+    flex: 1;
+}
+
+.signin-container input {
+    font-family: 'Montserrat', sans-serif;
+    color: #223656;
+    font-size: 1.2em;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid #223656;
+    flex: 2;
+}
+
+.fa-arrow-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #223656;
+    font-size: 1.5em;
+    margin: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.fa-arrow-left:hover {
+    color: #F08C4A;
+}
+
+.joiner-signup {
+    display: none;
+    height: max-content;
+    width: max-content;
+    background: rgb(67, 217, 192);
+    background: linear-gradient(90deg, rgba(67, 217, 192, 1) 0%, rgba(238, 213, 144, 1) 80%);
+    margin: 50px;
+    padding: 50px;
+    float: right;
+    border-radius: 10px;
+    position: relative;
+}
+
+.div-btn-signin {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-signin {
+    width: 50%;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 15px;
+    border-color: #43D9C0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F08C4A;
+    color: #223656;
+    font-size: 1.2em;
+}
+
+.btn-signin:hover {
+    background-color: #EED590;
+    color: #f04a4a;
+}
+
+.div-btn-signin a {
+    color: #223656;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.div-btn-signin a:hover {
+    text-decoration: underline;
+}
+
+.joiner-signup .form-group {
+    margin-top: 10px;
+}
+
+.joiner-signup label {
+    font-size: 1em;
+}
+
+.joiner-signup input {
+    font-size: 1.1em;
+    padding: 5px;
+}
+
+.alert li {
+    margin-top: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8;
+    color: #f04a4a;
+    list-style: none;
+}
+
+#btn-signup {
+    pointer-events: none;
+    background-color: #f2a979;
+}
+
+/* Book Tour */
+.book-tour-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listour-img-b1 {
+    background-image: url(../images/list-tour-bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+
+.listour-img-b2 {
+    background-image: url(../images/list-tour-bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+
+.book-tour-title,
+.div-btn-book {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-book-tour {
+    padding: 20px;
+}
+
+.book-tour-container form {
+    flex: 2.5;
+    background-color: rgba(22, 36, 56, 0.2);
+    height: max-content;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-book-tour .form-group {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.form-book-tour label:not(.tour-duration) {
+    font-family: 'Montserrat', sans-serif;
+    color: #223656;
+    font-size: 1em;
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.form-book-tour input:not(input[type="radio"]),
+select,
+.form-subgroup {
+    font-family: 'Montserrat', sans-serif;
+    color: #223656;
+    font-size: 1em;
+    flex: 2;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.form-subgroup {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-book-tour input,
+select {
+    padding: 10px 5px;
+}
+
+#btn-change-tour {
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F08C4A;
+    color: #223656;
+    font-size: 1em;
+}
+
+#btn-change-tour:hover {
+    background-color: #f04a4a;
+    color: #EED590;
+}
+
+#btn-addtour {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border-color: #43D9C0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F08C4A;
+    color: #223656;
+    font-size: 1.2em;
+}
+
+#btn-addtour:hover {
+    color: #f04a4a;
+    background-color: #EED590;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#input-num {
+    position: relative;
+}
+
+#input-num::before {
+    content: "\20B1";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    z-index: 1;
+}
+
+#input-num input[type="number"] {
+    padding-left: 30px;
+}
+
+#inclusion-div {
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 2px outset #223656;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #EED590;
+    color: #223656;
+    font-size: 1em;
+    height: max-content;
+}
+
+#inclusion-ul li {
+    margin-left: 15px;
+}
+
+#tour-dates input[type="radio"] {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+/* Tour History Menu */
+.tour-history-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../images/tour-history-bg.jpg);
+    background-size: cover;
+    background-position: center top 0;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.history-title {
+    margin-top: 40px;
+    padding: 10px 20px;
+    background-color: rgba(238, 213, 144, 1);
+    border-radius: 15px;
+}
+
+#tour-note {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: #EED590;
+    font-family: 'Shantell Sans', cursive;
+    color: #f04a4a;
+    font-size: 1em;
+}
+
+.div-tour-details {
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgb(67, 217, 192);
+    background: linear-gradient(90deg, rgba(67, 217, 192, 0.8) 0%, rgba(238, 213, 144, 0.8) 80%);
+    border-radius: 15px;
+    position: relative;
+}
+
+#payment-desc {
+    position: absolute;
+    top: 5px;
+    font-family: 'Shantell Sans', cursive;
+    color: #223656;
+    font-size: 0.9em;
+    color: #f04a4a;
+}
+
+.div-tour-details img {
+    flex: 1;
+}
+
+.tour-details {
+    margin-left: 15px;
+    width: fit-content;
+    border: 1px solid rgb(34, 54, 86, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    flex: 3;
+}
+
+.tour-details .form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(34, 54, 86, 0.4);
+}
+
+.tour-details .booked-label {
+    /* flex: 3; */
+    width: 40%;
+    margin-left: 10px;
+}
+
+.tour-details .booked-output {
+    /* flex: 4; */
+    width: 60%;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+}
+
+.tour-details label {
+    font-family: 'Shantell Sans', cursive;
+    color: #223656;
+    font-size: 0.9em;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: stretch;
+    margin-left: 15px;
+    flex: 1;
+}
+
+.button-group div,
+.button-group form {
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 2px solid #223656;
+    background-color: #F08C4A;
+}
+
+.button-group div a,
+.button-group form a {
+    font-family: 'Montserrat', sans-serif;
+    color: #223656;
+    font-size: 0.9em;
+}
+
+.button-group div:hover {
+    background-color: #EED590;
+}
+
+.button-group div a:hover {
+    color: #f04a4a;
+}
+
+.button-group form:hover {
+    background-color: #f04a4a;
+}
+
+.button-group form a:hover {
+    color: #EED590;
+}
+
+.paginate {
+    margin: 20px 0;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    background-color: #EED590;
+}
+
+.paginate a {
+    color: #223656;
+}
+
+.paginate a:hover {
+    color: #F08C4A;
+}
+
+/* Edit Tour Page */
+.editour-img-b1 {
+    background-image: url(../images/edit-tour-bg1.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+
+.editour-img-b2 {
+    background-image: url(../images/edit-tour-bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+
+.div-btn-edit {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.div-btn-edit button,
+.div-btn-print button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: 2px outset #EED590;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F08C4A;
+    color: #223656;
+    font-size: 1.2em;
+}
+
+#btn-save-edit:hover,
+#btn-print:hover {
+    color: #f04a4a;
+    background-color: #EED590;
+}
+
+/* View Tour Page */
+.view-tour-container {
+    display: flex;
+    justify-content: center;
+}
+
+.view-tour-title {
+    text-align: center;
+}
+
+.view-tour-container form {
+    background-color: rgba(22, 36, 56, 0.2);
+    width: 50%;
+    height: max-content;
+    margin: 30px;
+    padding: 30px 50px;
+    border-radius: 10px;
+}
+
+#div-view-tour .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#div-view-tour label,
+#view-inclusions {
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: #223656;
+    font-size: 1.2em;
+    flex: 1;
+}
+
+.div-btn-print {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#todate-holder {
+    max-height: 0;
+    visibility: hidden;
+}
+
+#index-footer {
+    position: absolute;
+    background-color: rgba(22, 36, 56, 0.7);
+    color: #EED590;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 98%;
+}
+
+footer {
+    position: relative;
+    background-color: rgba(22, 36, 56, 0.7);
+    color: #EED590;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.pano {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+}
+
+.toggle-map {
+    font-size: 20px;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.close-map{
+    display: none;
+    font-size: 20px;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.to-top{
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    z-index: 10;
+}
+
+#back-to-top{
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 100%;
+    background-color: rgba(240, 140, 74, 0.8);
+    border: 2px solid #223656;
+}
