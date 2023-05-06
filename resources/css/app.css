@@ -940,3 +940,208 @@ footer {
     background-color: rgba(240, 140, 74, 0.8);
     border: 2px solid #223656;
 }
+
+@media screen and (max-width: 900px) {
+    #li-div{
+        flex: 6;
+    }
+    .signin-container {
+        background-image: url(../images/signin-bg2.jpg);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+    } 
+    .joiner-login,
+    .joiner-signup {
+      padding: 20px;
+      width: max-content;
+      height: max-content;
+    }
+    .view-tour-container form{
+        width: 70vw;
+    }
+    .div-btn-edit #btn-save-edit{
+        margin-left: 0;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    .by-two{
+        display: block;
+    }
+    #accordion-container{
+        width: 100% !important;
+    }
+  }
+@media screen and (max-width: 700px) {
+    #home, #signin{
+        position: relative;
+        overflow: hidden;
+    }
+    h3, .search-tour label{
+        font-size: 1.3em;
+    }
+    nav ul:not(#view-tour, #edit-tour){
+        padding: 0;
+        width: 100%;
+    }
+    #li-div{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        z-index: 6;
+        top: 65px;
+        background-color: rgba(22, 36, 56, 0.8);
+    }
+    nav .user-li:not(#user-viewtour, #user-editour){
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        font-size: 0.9em;
+    }
+    .div-logo{
+        margin: 5px;
+    }
+    #toggler-label{
+        display: block;
+    }
+    #toggler-label:hover{
+        color: #EED590;
+    }
+    .hero-image {
+        height: 100vh;
+        background-image: url("../images/hero-bg2.jpg");
+    }
+    .hero-text {
+        height: 80vh;
+        text-align: center;
+    }
+    .hero-text h2{
+        font-size: 1.2em;
+    }
+    .hero-text h2:first-of-type{
+        font-size: 2.5em;
+    }
+    #btn-show-tours[type="button"] {
+        padding: 10px 15px;
+        margin-top: 20px;
+        font-size: 1em;
+    }
+    .signin-container label{
+        margin-right: 10px;
+        font-size: 0.9em;
+        text-align: center;
+    }
+    .signin-container input, .btn-signin, .search-tour input, .search-tour button, #btn-addtour, #btn-print{
+        font-size: 1em;
+    }
+    .fa-arrow-left{
+        font-size: 1.4em;
+        margin: 20px 10px;
+    }
+    .card{
+        height: 300px;
+    }
+    .carousel-arrow {
+        font-size: 20px;
+        padding: 0 5px;
+    }
+    .btn-book-tour{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+    .inclusions{
+        padding-left: 30px;
+        font-size: 12px;
+    }
+    .inclusions li{
+        margin-bottom: 2px;
+    }
+    .book-tour-container, .edit-tour-container{
+        display: block;
+    }
+    .listour-img-b1, .listour-img-b2, .editour-img-b1, .editour-img-b2{
+        height: 80px;
+        width: 100%;
+        background-position: center top 80%;
+    }
+    .book-tour-container form, .book-tour-title{
+        margin: 10px 20px;
+    }
+    .form-book-tour{
+        padding: 10px;
+    }
+    .form-book-tour .form-group{
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+    #btn-change-tour{
+        margin-left: 2px;
+        font-size: 0.8em;
+    }
+    .form-book-tour input:not(input[type="radio"]), select{
+        width: 100%;
+        display: block;
+    }
+    #input-num input[type="number"] {
+        width: 90% !important;
+    }
+    #inclusion-div{
+        padding: 10px 30px;
+        width: 80% !important;
+        font-size: 0.9em;
+    }
+    #tour-durations, #tour-dates{
+        justify-content: center;
+    }
+    .div-tour-details img{
+        display: none;
+    }
+    .view-tour-container form{
+        width: 80vw;
+        padding: 10px;
+    }
+    #div-view-tour .form-group{
+        margin-top: 10px;
+    }
+    #index-footer{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    .div-tour-details{
+        margin-top: 20px;
+        flex-direction: column;
+        padding: 10px;
+        transform: scale(0.9);
+        background: none;
+    }
+    .tour-details{
+        margin: 0;
+        width: 100%;
+        background: rgb(67,217,192);
+        background: linear-gradient(90deg, rgba(67,217,192,0.8) 0%, rgba(238,213,144,0.8) 80%);
+    }
+    .tour-details label, #payment-desc{
+        font-size: 0.8em;
+    }
+    .button-group{
+        flex-direction: row;
+        margin: 0;
+        width: 100%;
+    }
+    .button-group button{
+        padding: 5px 8px;
+    }
+    #div-view-tour label, #view-inclusions{
+        margin-left: 20px;
+        font-size: 1em;
+    }
+    .div-btn-edit #btn-save-edit, #btn-delete-tour{
+        margin-left: 0;
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}
